@@ -6,354 +6,84 @@
 <title>Publications — Nahiyan Saiyara Khan</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#F8F7F4;--surface:#fff;--navy:#1A2340;--navy-mid:#2E3D5F;--muted:#6B7280;--accent:#C4748A;--accent-light:#F4E6EA;--border:#E3E1DC}
+body{background:var(--bg);color:var(--navy);font-family:'Inter',sans-serif;font-size:15px;line-height:1.7}
+nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:58px;position:sticky;top:0;z-index:200}
+.nav-name{font-family:'DM Serif Display',serif;font-size:18px;color:var(--navy);text-decoration:none}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:.02em;transition:color .15s}
+.nav-links a:hover,.nav-links a.active{color:var(--accent)}
+.nav-cta{font-size:12px;font-weight:600;padding:6px 16px;border:1px solid var(--accent);border-radius:4px;color:var(--accent);text-decoration:none;transition:background .15s}
+.nav-cta:hover{background:var(--accent-light)}
 
-  :root {
-    --bg: #F8F7F4;
-    --surface: #FFFFFF;
-    --navy: #1A2340;
-    --navy-mid: #2E3D5F;
-    --muted: #6B7280;
-    --accent: #C4748A;
-    --accent-light: #F4E6EA;
-    --border: #E3E1DC;
-  }
+.page-header{background:var(--surface);border-bottom:1px solid var(--border);padding:4rem 2.5rem 3rem}
+.page-header-inner{max-width:840px;margin:0 auto}
+.page-eyebrow{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem}
+.page-title{font-family:'DM Serif Display',serif;font-size:40px;color:var(--navy);line-height:1.1;margin-bottom:.6rem}
+.page-sub{font-size:14px;color:var(--muted)}
 
-  body {
-    background: var(--bg);
-    color: var(--navy);
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    line-height: 1.7;
-  }
+main{max-width:840px;margin:0 auto;padding:3.5rem 2.5rem 5rem}
 
-  nav {
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
-    padding: 0 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 56px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
+.pub-section{margin-bottom:3.5rem}
+.pub-section-head{font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);padding-bottom:.75rem;border-bottom:1px solid var(--border);margin-bottom:1.5rem}
 
-  .nav-name {
-    font-family: 'DM Serif Display', serif;
-    font-size: 17px;
-    color: var(--navy);
-    text-decoration: none;
-  }
+/* article card */
+.pub-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.75rem;margin-bottom:1.1rem;transition:border-color .15s}
+.pub-card:hover{border-color:#D4A0AF}
+.pub-card.featured{border-left:3px solid var(--accent)}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:3px 11px;border-radius:20px;margin-bottom:.85rem}
+.badge.first{background:var(--accent-light);color:var(--accent);border:1px solid #E8C0CC}
+.badge.contrib{background:#EEF2FF;color:#4F5FA8;border:1px solid #C7CEF0}
+.badge.forthcoming{background:#FEF9EC;color:#8A6200;border:1px solid #E8CF80}
+.badge.thesis-b{background:#F0F4E8;color:#4A6C1C;border:1px solid #BFCF9E}
+.pub-title{font-family:'DM Serif Display',serif;font-size:18px;color:var(--navy);line-height:1.4;margin-bottom:.45rem}
+.pub-title a{color:inherit;text-decoration:none}
+.pub-title a:hover{color:var(--accent)}
+.pub-authors{font-size:13px;color:var(--muted);margin-bottom:.35rem}
+.pub-authors strong{color:var(--navy-mid);font-weight:600}
+.pub-journal{font-size:13px;color:var(--navy-mid);font-style:italic;margin-bottom:.9rem}
+.pub-journal span{font-style:normal;color:var(--muted)}
+.pub-abstract{font-size:13px;color:var(--muted);line-height:1.75;border-left:2px solid var(--border);padding-left:1rem;margin-bottom:1rem}
+.pub-links{display:flex;flex-wrap:wrap;gap:.65rem}
+.pub-link{font-size:12px;font-weight:500;color:var(--accent);padding:4px 13px;border:1px solid var(--accent);border-radius:4px;text-decoration:none;transition:background .15s}
+.pub-link:hover{background:var(--accent-light)}
+.pub-link.sec{color:var(--muted);border-color:var(--border)}
+.pub-link.sec:hover{background:var(--bg);color:var(--navy)}
 
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
+/* thesis */
+.thesis-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.75rem;margin-bottom:1.1rem}
+.thesis-meta{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.75rem 1.5rem;margin:1rem 0}
+.thesis-meta-item{}
+.thesis-meta-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:2px}
+.thesis-meta-value{font-size:13px;color:var(--navy-mid)}
 
-  .nav-links a {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--muted);
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    transition: color 0.15s;
-  }
+/* conference */
+.conf-entry{display:grid;grid-template-columns:88px 1fr;gap:1.25rem;padding:1rem 0;border-bottom:1px solid var(--border)}
+.conf-entry:last-child{border-bottom:none}
+.conf-year{font-size:12px;font-weight:600;color:var(--muted);padding-top:2px}
+.conf-title{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:3px;line-height:1.4}
+.conf-detail{font-size:13px;color:var(--muted)}
+.conf-award{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:#7C5C12;background:#FEF3C7;border:1px solid #F0D880;padding:2px 9px;border-radius:20px;margin-top:5px}
 
-  .nav-links a:hover, .nav-links a.active {
-    color: var(--accent);
-  }
+footer{text-align:center;padding:2rem;font-size:12px;color:var(--muted);border-top:1px solid var(--border)}
+footer a{color:var(--accent);text-decoration:none}
 
-  .page-header {
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
-    padding: 3.5rem 2rem 2.5rem;
-  }
-
-  .page-header-inner {
-    max-width: 780px;
-    margin: 0 auto;
-  }
-
-  .page-eyebrow {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
-  }
-
-  .page-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: 36px;
-    color: var(--navy);
-    line-height: 1.2;
-    margin-bottom: 0.75rem;
-  }
-
-  .page-subtitle {
-    font-size: 14px;
-    color: var(--muted);
-  }
-
-  main {
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 3rem 2rem 5rem;
-  }
-
-  .pub-section {
-    margin-bottom: 3.5rem;
-  }
-
-  .pub-section-heading {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1.25rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .pub-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1.5rem 1.75rem;
-    margin-bottom: 1rem;
-    position: relative;
-    transition: border-color 0.15s;
-  }
-
-  .pub-card:hover {
-    border-color: #D4A0AF;
-  }
-
-  .pub-card.featured {
-    border-left: 3px solid var(--accent);
-    padding-left: calc(1.75rem - 2px);
-  }
-
-  .pub-badge {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 3px 10px;
-    border-radius: 20px;
-    margin-bottom: 0.75rem;
-  }
-
-  .pub-badge.first-author {
-    background: var(--accent-light);
-    color: var(--accent);
-    border: 1px solid #E8C0CC;
-  }
-
-  .pub-badge.contrib {
-    background: #EEF2FF;
-    color: #4F5FA8;
-    border: 1px solid #C7CEF0;
-  }
-
-  .pub-badge.thesis {
-    background: #F0F4E8;
-    color: #4A6C1C;
-    border: 1px solid #BFCF9E;
-  }
-
-  .pub-badge.forthcoming {
-    background: #FEF9EC;
-    color: #8A6200;
-    border: 1px solid #E8CF80;
-  }
-
-  .pub-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: 17px;
-    color: var(--navy);
-    line-height: 1.4;
-    margin-bottom: 0.5rem;
-  }
-
-  .pub-title a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .pub-title a:hover {
-    color: var(--accent);
-  }
-
-  .pub-authors {
-    font-size: 13px;
-    color: var(--muted);
-    margin-bottom: 0.4rem;
-  }
-
-  .pub-authors strong {
-    color: var(--navy-mid);
-    font-weight: 600;
-  }
-
-  .pub-journal {
-    font-size: 13px;
-    color: var(--navy-mid);
-    font-style: italic;
-    margin-bottom: 0.75rem;
-  }
-
-  .pub-journal span {
-    font-style: normal;
-    color: var(--muted);
-  }
-
-  .pub-abstract {
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.7;
-    margin-bottom: 1rem;
-    border-left: 2px solid var(--border);
-    padding-left: 1rem;
-  }
-
-  .pub-links {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
-
-  .pub-link {
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--accent);
-    text-decoration: none;
-    padding: 4px 12px;
-    border: 1px solid var(--accent);
-    border-radius: 4px;
-    transition: background 0.15s;
-  }
-
-  .pub-link:hover {
-    background: var(--accent-light);
-  }
-
-  .pub-link.secondary {
-    color: var(--muted);
-    border-color: var(--border);
-  }
-
-  .pub-link.secondary:hover {
-    background: var(--bg);
-    color: var(--navy);
-  }
-
-  /* Thesis card */
-  .thesis-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1.5rem 1.75rem;
-    margin-bottom: 1rem;
-  }
-
-  .thesis-meta-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 0.75rem 1.5rem;
-    margin: 1rem 0;
-  }
-
-  .thesis-meta-item {
-    font-size: 13px;
-  }
-
-  .thesis-meta-label {
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--muted);
-    margin-bottom: 2px;
-  }
-
-  .thesis-meta-value {
-    color: var(--navy-mid);
-  }
-
-  /* Conference */
-  .conf-entry {
-    display: grid;
-    grid-template-columns: 90px 1fr;
-    gap: 1rem;
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .conf-entry:last-child {
-    border-bottom: none;
-  }
-
-  .conf-year {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--muted);
-    padding-top: 2px;
-  }
-
-  .conf-title {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--navy);
-    line-height: 1.4;
-    margin-bottom: 3px;
-  }
-
-  .conf-detail {
-    font-size: 13px;
-    color: var(--muted);
-  }
-
-  .conf-award {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 11px;
-    font-weight: 600;
-    color: #7C5C12;
-    background: #FEF3C7;
-    border: 1px solid #F0D880;
-    padding: 2px 8px;
-    border-radius: 20px;
-    margin-top: 5px;
-  }
-
-  footer {
-    text-align: center;
-    padding: 2rem;
-    font-size: 12px;
-    color: var(--muted);
-    border-top: 1px solid var(--border);
-  }
-
-  @media (max-width: 600px) {
-    .conf-entry { grid-template-columns: 1fr; gap: 0.25rem; }
-    .conf-year { padding-top: 0; }
-  }
+@media(max-width:600px){
+  .conf-entry{grid-template-columns:1fr;gap:.25rem}
+  main,nav{padding-left:1.25rem;padding-right:1.25rem}
+  .page-header{padding:3rem 1.25rem 2.5rem}
+}
 </style>
 </head>
 <body>
-
 <nav>
-  <a href="#" class="nav-name">Nahiyan Saiyara Khan</a>
+  <a href="about.html" class="nav-name">Nahiyan Saiyara Khan</a>
   <ul class="nav-links">
-    <li><a href="https://nahiyan-saiyara-khan.notion.site/Hi-I-m-Nahiyan-49aa1b6caacd82198e6f0157b75c6e96" target="_blank">About</a></li>
+    <li><a href="about.html">About</a></li>
     <li><a href="cv.html">CV</a></li>
     <li><a href="publications.html" class="active">Publications</a></li>
+    <li><a href="about.html#contact" class="nav-cta">Contact</a></li>
   </ul>
 </nav>
 
@@ -361,109 +91,95 @@
   <div class="page-header-inner">
     <p class="page-eyebrow">Research Output</p>
     <h1 class="page-title">Publications &amp; Theses</h1>
-    <p class="page-subtitle">Peer-reviewed articles, graduate theses, and conference presentations</p>
+    <p class="page-sub">Peer-reviewed articles, graduate theses, and conference presentations</p>
   </div>
 </div>
 
 <main>
 
-  <!-- Journal Articles -->
+  <!-- JOURNAL ARTICLES -->
   <div class="pub-section">
-    <h2 class="pub-section-heading">Journal Articles</h2>
+    <h2 class="pub-section-head">Journal Articles</h2>
 
     <div class="pub-card featured">
-      <span class="pub-badge first-author">First Author</span>
-      <h3 class="pub-title">
-        <a href="https://doi.org/10.1002/cpt.70353" target="_blank">
-          Reducing Exposure Before Birth: An Interrupted Time Series Study of Prenatal Exposure to Fetotoxic Medications Under Risk Management Plans in Canada
-        </a>
-      </h3>
+      <span class="badge first">First Author</span>
+      <h3 class="pub-title"><a href="https://doi.org/10.1002/cpt.70353" target="_blank">Reducing Exposure Before Birth: An Interrupted Time Series Study of Prenatal Exposure to Fetotoxic Medications Under Risk Management Plans in Canada</a></h3>
       <p class="pub-authors"><strong>Khan NS</strong>, Sheehy O, Freitas Leal L, Tchuente V, Bérard A.</p>
       <p class="pub-journal"><em>Clinical Pharmacology &amp; Therapeutics</em> <span>· 2025 · DOI: 10.1002/cpt.70353</span></p>
-      <p class="pub-abstract">
-        Using interrupted time series analysis applied to the Quebec Pregnancy Cohort (~559,000 pregnancies, 1998–2022), this study evaluated whether Canadian risk management plans reduced prenatal exposure to fetotoxic medications. Segmented quasi-Poisson regression with Newey-West heteroscedasticity- and autocorrelation-consistent standard errors and Fourier seasonality adjustment were employed, with non-fetotoxic controls as negative comparators.
-      </p>
+      <p class="pub-abstract">Using interrupted time series analysis applied to the Quebec Pregnancy Cohort (~559,000 pregnancies, 1998–2022), this study evaluated whether Canadian risk management plans reduced prenatal exposure to fetotoxic medications. Segmented quasi-Poisson regression with Newey-West HAC SEs and Fourier seasonality adjustment, with non-fetotoxic controls as negative comparators.</p>
       <div class="pub-links">
         <a href="https://doi.org/10.1002/cpt.70353" target="_blank" class="pub-link">DOI →</a>
-        <a href="#" class="pub-link secondary">PubMed</a>
-        <a href="#" class="pub-link secondary">Cite</a>
+        <a href="#" class="pub-link sec">PubMed</a>
+        <a href="#" class="pub-link sec">Cite (BibTeX)</a>
       </div>
     </div>
 
-    <!-- Placeholder for upcoming Safe Beginnings / Thérapie manuscripts -->
     <div class="pub-card">
-      <span class="pub-badge forthcoming">Forthcoming</span>
+      <span class="badge contrib">Contributing Author</span>
+      <h3 class="pub-title">COVID-19 During Pregnancy: Prevalence, Predictors, and Impact on the Newborn</h3>
+      <p class="pub-authors">Bérard A, <strong>Khan NS</strong>, et al.</p>
+      <p class="pub-journal"><em>Journal</em> <span>· Add journal/year details</span></p>
+      <div class="pub-links">
+        <a href="#" class="pub-link sec">PubMed</a>
+      </div>
+    </div>
+
+    <div class="pub-card">
+      <span class="badge forthcoming">In Preparation</span>
       <h3 class="pub-title">Safe Beginnings Special Issue — Mother-Child Cohorts in Canada and France</h3>
       <p class="pub-authors"><strong>Khan NS</strong> et al. (Safe Beginnings Collaborative)</p>
-      <p class="pub-journal"><em>Thérapie</em> <span>· In preparation · Expected 2025–2026</span></p>
-      <p class="pub-abstract">
-        Multi-manuscript special issue reviewing and comparing mother-child cohort infrastructure in Canada and France, characterising data sources, exposures, and outcomes relevant to perinatal pharmacoepidemiology.
-      </p>
+      <p class="pub-journal"><em>Thérapie</em> <span>· Expected 2025–2026</span></p>
+      <p class="pub-abstract">Multi-manuscript special issue reviewing and comparing mother-child cohort infrastructure in Canada and France, characterising data sources, exposures, and outcomes relevant to perinatal pharmacoepidemiology.</p>
     </div>
 
   </div>
 
-  <!-- Theses -->
+  <!-- THESES -->
   <div class="pub-section">
-    <h2 class="pub-section-heading">Graduate Theses</h2>
+    <h2 class="pub-section-head">Graduate Theses</h2>
 
     <div class="thesis-card">
-      <span class="pub-badge thesis">PhD Thesis — In Progress</span>
+      <span class="badge thesis-b">PhD Thesis — In Progress</span>
       <h3 class="pub-title">Impact of Risk Management Plans on Prenatal Exposure to Fetotoxic Medications: A Population-Based Study Using the Quebec Pregnancy Cohort</h3>
-      <div class="thesis-meta-grid">
-        <div class="thesis-meta-item">
-          <p class="thesis-meta-label">Institution</p>
-          <p class="thesis-meta-value">Université de Montréal, Faculty of Pharmacy</p>
-        </div>
-        <div class="thesis-meta-item">
-          <p class="thesis-meta-label">Supervisor</p>
-          <p class="thesis-meta-value">Prof. Anick Bérard (Canada Research Chair, Tier 1)</p>
-        </div>
-        <div class="thesis-meta-item">
-          <p class="thesis-meta-label">Programme</p>
-          <p class="thesis-meta-value">PhD, Pharmaceutical Sciences (Pharmacoepidemiology)</p>
-        </div>
-        <div class="thesis-meta-item">
-          <p class="thesis-meta-label">Status</p>
-          <p class="thesis-meta-value">Comprehensive exam passed · May 2025</p>
-        </div>
+      <div class="thesis-meta">
+        <div class="thesis-meta-item"><p class="thesis-meta-label">Institution</p><p class="thesis-meta-value">Université de Montréal, Faculty of Pharmacy</p></div>
+        <div class="thesis-meta-item"><p class="thesis-meta-label">Supervisor</p><p class="thesis-meta-value">Prof. Anick Bérard (Canada Research Chair, Tier 1)</p></div>
+        <div class="thesis-meta-item"><p class="thesis-meta-label">Programme</p><p class="thesis-meta-value">PhD, Pharmaceutical Sciences — Pharmacoepidemiology</p></div>
+        <div class="thesis-meta-item"><p class="thesis-meta-label">Status</p><p class="thesis-meta-value">Comprehensive exam passed · May 2025 · Expected 2027</p></div>
+        <div class="thesis-meta-item"><p class="thesis-meta-label">Methods</p><p class="thesis-meta-value">ITS, segmented quasi-Poisson, Newey-West HAC SEs, Fourier seasonality</p></div>
+        <div class="thesis-meta-item"><p class="thesis-meta-label">Data</p><p class="thesis-meta-value">QPC · RAMQ · MED-ECHO · ISQ (~559K pregnancies)</p></div>
       </div>
     </div>
 
     <div class="thesis-card">
-      <span class="pub-badge thesis">M.Sc. Thesis</span>
+      <span class="badge thesis-b">M.Sc. Thesis</span>
       <h3 class="pub-title">Environmental Epidemiology &amp; Toxicology — Occupational and Environmental Health</h3>
-      <div class="thesis-meta-grid">
-        <div class="thesis-meta-item">
-          <p class="thesis-meta-label">Institution</p>
-          <p class="thesis-meta-value">Université de Montréal, ESPUM</p>
-        </div>
-        <div class="thesis-meta-item">
-          <p class="thesis-meta-label">Programme</p>
-          <p class="thesis-meta-value">M.Sc., Occupational &amp; Environmental Health</p>
-        </div>
-        <div class="thesis-meta-item">
-          <p class="thesis-meta-label">Completed</p>
-          <p class="thesis-meta-value">2021</p>
-        </div>
-        <div class="thesis-meta-item">
-          <p class="thesis-meta-label">Focus</p>
-          <p class="thesis-meta-value">Personal care products &amp; biomonitoring</p>
-        </div>
+      <div class="thesis-meta">
+        <div class="thesis-meta-item"><p class="thesis-meta-label">Institution</p><p class="thesis-meta-value">ESPUM, Université de Montréal</p></div>
+        <div class="thesis-meta-item"><p class="thesis-meta-label">Programme</p><p class="thesis-meta-value">M.Sc., Occupational &amp; Environmental Health — Research Option</p></div>
+        <div class="thesis-meta-item"><p class="thesis-meta-label">Completed</p><p class="thesis-meta-value">2022</p></div>
       </div>
-      <div class="pub-links" style="margin-top: 0.75rem;">
-        <a href="#" class="pub-link secondary">Papyrus (UdeM repository)</a>
+      <div class="pub-links" style="margin-top:.75rem">
+        <a href="#" class="pub-link sec">Papyrus (UdeM repository)</a>
       </div>
     </div>
 
   </div>
 
-  <!-- Conference Presentations -->
+  <!-- PRESENTATIONS -->
   <div class="pub-section">
-    <h2 class="pub-section-heading">Presentations &amp; Posters</h2>
+    <h2 class="pub-section-head">Conference Presentations &amp; Posters</h2>
 
     <div class="conf-entry">
-      <span class="conf-year">2026</span>
+      <span class="conf-year">Aug–Sep<br>2026</span>
+      <div>
+        <p class="conf-title">ICPE 2026 — Poster Presentation</p>
+        <p class="conf-detail">International Society for Pharmacoepidemiology · Milan, Italy · August 29 – September 2, 2026</p>
+      </div>
+    </div>
+
+    <div class="conf-entry">
+      <span class="conf-year">May 2026</span>
       <div>
         <p class="conf-title">Risk Management Plans and Prenatal Fetotoxic Medication Exposure — Poster</p>
         <p class="conf-detail">CEQSCEB Epidemiology &amp; Biostatistics Symposium · ESPUM, Université de Montréal · May 21, 2026</p>
@@ -472,19 +188,27 @@
     </div>
 
     <div class="conf-entry">
-      <span class="conf-year">2026</span>
+      <span class="conf-year">Feb 2026</span>
       <div>
-        <p class="conf-title">RMPs and Prenatal Fetotoxic Medication Exposure — Oral / Poster</p>
-        <p class="conf-detail">40th Congrès CHUSJ · CHU Sainte-Justine, Montréal · February 2026</p>
+        <p class="conf-title">RMPs and Prenatal Fetotoxic Medication Exposure — Poster</p>
+        <p class="conf-detail">40th Congrès · CHU Sainte-Justine Research Centre · Montréal · February 2026</p>
         <span class="conf-award">🏆 Prix d'excellence</span>
       </div>
     </div>
 
     <div class="conf-entry">
-      <span class="conf-year">2026</span>
+      <span class="conf-year">2023</span>
       <div>
-        <p class="conf-title">ICPE 2026 — Poster Presentation</p>
-        <p class="conf-detail">International Society for Pharmacoepidemiology · Milan, Italy · August 29 – September 2, 2026</p>
+        <p class="conf-title">BDRP 63rd Annual Meeting — Presentation</p>
+        <p class="conf-detail">Birth Defects Research for Children · Charleston, South Carolina, USA</p>
+      </div>
+    </div>
+
+    <div class="conf-entry">
+      <span class="conf-year">2023</span>
+      <div>
+        <p class="conf-title">13th Summer School on Medicines — Workshop</p>
+        <p class="conf-detail">CAMCCO-L / MICYRN · Barcelona, Spain · Pharmacoepidemiology case studies workshop</p>
       </div>
     </div>
 
@@ -492,9 +216,6 @@
 
 </main>
 
-<footer>
-  © 2026 Nahiyan Saiyara Khan &nbsp;·&nbsp; <a href="cv.html" style="color: var(--accent); text-decoration: none;">← CV</a>
-</footer>
-
+<footer>© 2026 Nahiyan Saiyara Khan &nbsp;·&nbsp; <a href="cv.html">← CV</a> &nbsp;·&nbsp; <a href="about.html">About</a></footer>
 </body>
 </html>
