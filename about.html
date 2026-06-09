@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nahiyan Saiyara Khan — Pharmacoepidemiology Researcher</title>
 <meta name="description" content="PhD Candidate in Pharmaceutical Sciences at Université de Montréal. Causal inference, real-world data, drug safety, pharmacovigilance.">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Caveat:wght@700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -15,7 +15,7 @@
 }
 body{background:var(--bg);color:var(--navy);font-family:'Inter',sans-serif;font-size:15px;line-height:1.7}
 
-/* ── NAV ── */
+/* NAV */
 nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:58px;position:sticky;top:0;z-index:200}
 .nav-name{font-family:'DM Serif Display',serif;font-size:18px;color:var(--navy);text-decoration:none}
 .nav-links{display:flex;gap:2rem;list-style:none}
@@ -24,11 +24,18 @@ nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 2.
 .nav-cta{font-size:12px;font-weight:600;padding:6px 16px;border:1px solid var(--accent);border-radius:4px;color:var(--accent);text-decoration:none;transition:background .15s}
 .nav-cta:hover{background:var(--accent-light)}
 
-/* ── HERO ── */
-.hero{background:var(--surface);border-bottom:1px solid var(--border);padding:6rem 2.5rem 5rem}
-.hero-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 280px;gap:4rem;align-items:center}
+/* ARTICLE BANNER */
+.article-banner{background:var(--navy);padding:.85rem 2.5rem;display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap}
+.article-banner-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);background:var(--accent-light);padding:3px 10px;border-radius:20px;white-space:nowrap}
+.article-banner-text{font-size:13px;color:rgba(255,255,255,.75);font-style:italic}
+.article-banner-link{font-size:13px;font-weight:600;color:#fff;text-decoration:none;white-space:nowrap;display:inline-flex;align-items:center;gap:5px;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:1px;transition:border-color .15s}
+.article-banner-link:hover{border-color:#fff}
+
+/* HERO */
+.hero{background:var(--surface);border-bottom:1px solid var(--border);padding:5.5rem 2.5rem 4.5rem}
+.hero-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 260px;gap:4rem;align-items:center}
 .hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
-.hero-name{font-family:'DM Serif Display',serif;font-size:clamp(36px,5vw,58px);color:var(--navy);line-height:1.05;margin-bottom:1.5rem}
+.hero-name{font-family:'Caveat',cursive;font-weight:700;font-size:clamp(52px,7vw,80px);color:var(--navy);line-height:1;margin-bottom:1.5rem;white-space:nowrap}
 .hero-tagline{font-size:16px;color:var(--navy-mid);line-height:1.8;border-left:3px solid var(--accent);padding-left:1.25rem;margin-bottom:2rem;max-width:520px}
 .hero-meta{display:flex;flex-direction:column;gap:8px;margin-bottom:2.25rem}
 .hero-meta-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
@@ -40,11 +47,10 @@ nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 2.
 .btn-dark:hover{background:var(--navy-mid)}
 .btn-outline{display:inline-flex;align-items:center;gap:7px;padding:11px 22px;background:transparent;color:var(--navy);border:1px solid var(--border-mid);border-radius:5px;font-size:13px;font-weight:500;text-decoration:none;transition:all .15s}
 .btn-outline:hover{border-color:var(--accent);background:var(--accent-light);color:var(--accent)}
-.hero-photo-wrap{position:relative}
-.hero-photo{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:top center;border-radius:0;border:none;display:block;background:transparent}
+.hero-photo{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:0;border:none;display:block;background:transparent}
 .hero-photo-credit{font-size:10px;color:var(--muted);text-align:center;margin-top:6px}
 
-/* ── STATS ── */
+/* STATS BAND */
 .stats-band{background:var(--navy);padding:3rem 2.5rem}
 .stats-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12);border-radius:10px;overflow:hidden}
 .stat-item{background:var(--navy);padding:2rem 2.25rem;text-align:center}
@@ -52,21 +58,20 @@ nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 2.
 .stat-num sup{font-size:22px;color:var(--accent)}
 .stat-desc{font-size:12px;color:rgba(255,255,255,.55);line-height:1.6;max-width:140px;margin:0 auto}
 
-/* ── SECTION SHARED ── */
+/* SECTIONS */
 .section{padding:4.5rem 2.5rem}
 .section-inner{max-width:900px;margin:0 auto}
 .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
 .section-heading{font-family:'DM Serif Display',serif;font-size:28px;color:var(--navy);margin-bottom:2rem;line-height:1.2}
 .section-alt{background:var(--surface)}
 
-/* ── ABOUT ── */
+/* ABOUT */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
 .about-body p{font-size:15px;color:var(--navy-mid);line-height:1.85;margin-bottom:1rem}
 .about-body p:last-child{margin-bottom:0}
 .about-body strong{color:var(--navy);font-weight:600}
 .interest-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.5rem}
 .tag{font-size:12px;font-weight:500;padding:5px 14px;border-radius:20px;background:var(--accent-light);color:var(--accent);border:1px solid #E8C0CC}
-.about-sidebar{}
 .sidebar-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.4rem 1.6rem;margin-bottom:1rem}
 .sidebar-card:last-child{margin-bottom:0}
 .sidebar-label{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem}
@@ -74,58 +79,20 @@ nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 2.
 .sidebar-item:last-child{margin-bottom:0}
 .sidebar-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:7px}
 
-/* ── EXPERIENCE TIMELINE ── */
-.timeline{position:relative;padding-left:0}
-.tl-entry{display:grid;grid-template-columns:140px 1fr;gap:1.5rem;padding-bottom:2.5rem;position:relative}
-.tl-entry:last-child{padding-bottom:0}
-.tl-date{font-size:12px;font-weight:500;color:var(--muted);padding-top:3px;text-align:right;line-height:1.4}
-.tl-body{padding-left:1.75rem;position:relative;border-left:1px solid var(--border)}
-.tl-body::before{content:'';position:absolute;left:-5px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
-.tl-title{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:2px}
-.tl-org{font-size:13px;color:var(--accent);font-weight:500;margin-bottom:6px}
-.tl-org span{color:var(--muted);font-weight:400}
-.tl-detail{font-size:13px;color:var(--muted);line-height:1.7}
-.tl-detail ul{margin:.5rem 0 0 1rem;list-style:disc}
-.tl-detail li{margin-bottom:4px}
-.tl-section-break{grid-column:1/-1;padding:.75rem 0 1.5rem;border-top:1px solid var(--border);margin-top:.5rem}
-.tl-section-break-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-
-/* ── SKILLS ── */
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
-.skill-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.25rem 1.4rem}
-.skill-cat{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
-.skill-list{font-size:13px;color:var(--navy-mid);line-height:1.7}
-
-/* ── PROJECTS ── */
+/* PROJECTS */
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem}
 .project-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.75rem;display:flex;flex-direction:column;gap:.75rem;transition:border-color .15s,transform .15s}
 .project-card:hover{border-color:var(--accent);transform:translateY(-2px)}
-.project-card a{text-decoration:none;color:inherit}
 .proj-header{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
 .proj-title{font-family:'DM Serif Display',serif;font-size:17px;color:var(--navy);line-height:1.3}
 .proj-period{font-size:11px;font-weight:600;color:var(--muted);white-space:nowrap;padding-top:3px}
 .proj-url{font-size:11px;color:var(--accent);font-weight:500;margin-bottom:2px}
+.proj-url a{color:inherit;text-decoration:none}
 .proj-body{font-size:13px;color:var(--muted);line-height:1.7;flex:1}
 .proj-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:.25rem}
 .proj-tag{font-size:11px;padding:3px 10px;border-radius:20px;background:var(--bg);color:var(--muted);border:1px solid var(--border)}
 
-/* ── AWARDS ── */
-.awards-list{display:flex;flex-direction:column;gap:0}
-.award-row{display:grid;grid-template-columns:90px 1fr;gap:1.25rem;padding:1rem 0;border-bottom:1px solid var(--border)}
-.award-row:last-child{border-bottom:none}
-.award-year{font-size:12px;font-weight:600;color:var(--muted);padding-top:2px}
-.award-body{}
-.award-title{font-size:14px;font-weight:600;color:var(--navy);line-height:1.4}
-.award-detail{font-size:13px;color:var(--muted);margin-top:2px}
-
-/* ── CERTIFICATIONS ── */
-.cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.85rem}
-.cert-card{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:1rem 1.2rem;display:flex;gap:.85rem;align-items:flex-start}
-.cert-icon{width:32px;height:32px;background:var(--accent-light);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.cert-icon svg{width:16px;height:16px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.cert-text{font-size:12px;color:var(--navy-mid);line-height:1.5}
-
-/* ── CONTACT ── */
+/* CONTACT */
 .contact-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
 .contact-intro{font-size:15px;color:var(--navy-mid);line-height:1.85;margin-bottom:1.5rem}
 .contact-links{display:flex;flex-direction:column;gap:.75rem}
@@ -144,28 +111,27 @@ nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 2.
 .form-submit{width:100%;padding:12px;background:var(--navy);color:#fff;border:none;border-radius:5px;font-size:14px;font-weight:500;font-family:'Inter',sans-serif;cursor:pointer;transition:background .15s}
 .form-submit:hover{background:var(--navy-mid)}
 
-/* ── FOOTER ── */
+/* FOOTER */
 footer{background:var(--navy);padding:2.5rem;text-align:center}
 .footer-inner{max-width:900px;margin:0 auto}
 footer p{font-size:12px;color:rgba(255,255,255,.4)}
 footer a{color:rgba(255,255,255,.6);text-decoration:none}
 footer a:hover{color:var(--accent)}
-.footer-links{display:flex;justify-content:center;gap:2rem;margin-bottom:1rem}
+.footer-links{display:flex;justify-content:center;gap:2rem;margin-bottom:1rem;flex-wrap:wrap}
 .footer-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.6);text-decoration:none;transition:color .15s}
 .footer-links a:hover{color:var(--accent)}
 
-/* ── RESPONSIVE ── */
 @media(max-width:760px){
   .hero-inner{grid-template-columns:1fr;gap:2rem}
-  .hero-photo-wrap{order:-1;max-width:200px}
+  .hero-photo{max-width:180px}
+  .hero-name{font-size:52px;white-space:normal}
   .about-grid{grid-template-columns:1fr}
   .stats-inner{grid-template-columns:1fr}
-  .tl-entry{grid-template-columns:80px 1fr;gap:1rem}
   .contact-wrapper{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
-  nav{padding:0 1.25rem}
-  .section{padding:3rem 1.25rem}
-  .hero{padding:3.5rem 1.25rem 3rem}
+  nav,.hero,.section{padding-left:1.25rem;padding-right:1.25rem}
+  .article-banner{padding:.85rem 1.25rem}
+  .stats-band{padding:3rem 1.25rem}
 }
 </style>
 </head>
@@ -182,12 +148,19 @@ footer a:hover{color:var(--accent)}
   </ul>
 </nav>
 
+<!-- LATEST ARTICLE BANNER -->
+<div class="article-banner">
+  <span class="article-banner-label">✦ New publication</span>
+  <span class="article-banner-text">Reducing Exposure Before Birth: An ITS Study of Prenatal Exposure to Fetotoxic Medications Under RMPs in Canada</span>
+  <a href="https://doi.org/10.1002/cpt.70353" target="_blank" class="article-banner-link">Read in CPT →</a>
+</div>
+
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div>
       <p class="hero-eyebrow">PhD Candidate · Pharmacoepidemiology · Université de Montréal</p>
-      <h1 class="hero-name">Hi, I'm<br>Nahiyan !</h1>
+      <h1 class="hero-name">Hi, I'm Nahiyan !</h1>
       <p class="hero-tagline">PhD researcher using causal inference and real-world data to understand how risk management policies influence teratogenic medication use during pregnancy — generating evidence that empowers pregnant people, clinicians, and policymakers alike.</p>
       <div class="hero-meta">
         <span class="hero-meta-item">
@@ -215,8 +188,8 @@ footer a:hover{color:var(--accent)}
         <a href="#contact" class="btn-outline">Get in touch</a>
       </div>
     </div>
-    <div class="hero-photo-wrap">
-      <img src="photo-circle.png" alt="Nahiyan Saiyara Khan" class="hero-photo" style="border-radius:0;border:none;background:transparent">
+    <div>
+      <img src="photo-circle.png" alt="Nahiyan Saiyara Khan" class="hero-photo">
       <p class="hero-photo-credit">Photo credit: phlowstudio</p>
     </div>
   </div>
@@ -247,9 +220,8 @@ footer a:hover{color:var(--accent)}
     <h2 class="section-heading">Researcher. Epidemiologist. Future industry scientist.</h2>
     <div class="about-grid">
       <div class="about-body">
-        <p>I'm a PhD Candidate in Pharmaceutical Sciences at Université de Montréal, based at the Azrieli Research Centre, CHU Sainte-Justine, supervised by Prof. Anick Bérard (Canada Research Chair, Tier 1). My doctoral research focuses on evaluating the impact of risk management and regulatory interventions on the use of teratogenic medications during pregnancy in Canada, using real-world data and causal inference methods — primarily interrupted time series (ITS) analysis applied to the Quebec Pregnancy Cohort (~559,000 pregnancies, 1998–2022).</p>
-        <p>With advanced training across epidemiology, biostatistics, and health policy, I bring 4+ years of experience working with large administrative databases, real-world evidence, and healthcare utilization data. I have strong expertise in statistical programming (R, Python, SAS, SQL) and scientific communication, with a proven ability to translate complex analyses into clear, actionable insights.</p>
-        <p>I am particularly interested in roles in <strong>pharmacovigilance, drug safety, real-world evidence (RWE), HEOR</strong>, and medical affairs — fields where rigorous evidence directly shapes regulatory, clinical, and strategic decisions. I also have hands-on clinical observership experience in pharmacovigilance (CRPV Cochin, AP-HP) and OB-GYN (Hôpital Pitié-Salpêtrière).</p>
+        <p>I'm a PhD Candidate in Pharmaceutical Sciences at Université de Montréal, based at the Azrieli Research Centre, CHU Sainte-Justine, supervised by Prof. Anick Bérard (Canada Research Chair, Tier 1). My doctoral research evaluates the real-world impact of risk management plans on prenatal exposure to teratogenic and fetotoxic medications, using 25 years of data from the Quebec Pregnancy Cohort.</p>
+        <p>I am particularly interested in roles in <strong>pharmacovigilance, drug safety, RWE, and HEOR</strong> — fields where rigorous evidence shapes regulatory, clinical, and strategic decisions. I also hold hands-on observership experience in pharmacovigilance (CRPV Cochin, AP-HP, Paris) and OB-GYN (Hôpital Pitié-Salpêtrière, Paris).</p>
         <div class="interest-tags">
           <span class="tag">Pharmacovigilance</span>
           <span class="tag">Drug Safety</span>
@@ -261,18 +233,12 @@ footer a:hover{color:var(--accent)}
           <span class="tag">Perinatal Epidemiology</span>
         </div>
       </div>
-      <div class="about-sidebar">
+      <div>
         <div class="sidebar-card">
           <p class="sidebar-label">Education</p>
-          <div class="sidebar-item"><span class="sidebar-dot"></span><span>PhD, Pharmaceutical Sciences (Pharmacoepidemiology) — Université de Montréal (2023–2027) · Supervisor: Prof. Anick Bérard, Canada Research Chair Tier 1</span></div>
-          <div class="sidebar-item"><span class="sidebar-dot"></span><span>M.Sc., Environmental &amp; Occupational Health — ESPUM, UdeM (2021–2022) · GPA 4.00/4.30 · Supervisor: Dr. Maryse Bouchard (CRC on Environmental Contaminants); Co-supervisor: Dr. Jillian Ashley-Martin</span></div>
-          <div class="sidebar-item"><span class="sidebar-dot"></span><span>B.Sc., Biochemistry &amp; Molecular Medicine (Specialization: Molecular Medicine) — Université de Montréal (2017–2020)</span></div>
-        </div>
-        <div class="sidebar-card">
-          <p class="sidebar-label">Languages</p>
-          <div class="sidebar-item"><span class="sidebar-dot"></span><span>English — Native / Bilingual</span></div>
-          <div class="sidebar-item"><span class="sidebar-dot"></span><span>French — Native / Bilingual</span></div>
-          <div class="sidebar-item"><span class="sidebar-dot"></span><span>Bengali — Native / Bilingual</span></div>
+          <div class="sidebar-item"><span class="sidebar-dot"></span><span>PhD, Pharmaceutical Sciences (Pharmacoepidemiology) — Université de Montréal · Supervisor: Prof. Anick Bérard, CRC Tier 1</span></div>
+          <div class="sidebar-item"><span class="sidebar-dot"></span><span>M.Sc., Environmental &amp; Occupational Health — ESPUM, UdeM · Supervisor: Dr. Maryse Bouchard (CRC)</span></div>
+          <div class="sidebar-item"><span class="sidebar-dot"></span><span>B.Sc., Biochemistry &amp; Molecular Medicine — Université de Montréal</span></div>
         </div>
         <div class="sidebar-card">
           <p class="sidebar-label">Career interests</p>
@@ -280,155 +246,11 @@ footer a:hover{color:var(--accent)}
           <div class="sidebar-item"><span class="sidebar-dot"></span><span>Real-World Evidence Scientist</span></div>
           <div class="sidebar-item"><span class="sidebar-dot"></span><span>HEOR Analyst</span></div>
           <div class="sidebar-item"><span class="sidebar-dot"></span><span>Medical Science Liaison (MSL)</span></div>
-          <div class="sidebar-item"><span class="sidebar-dot"></span><span>Epidemiology / Healthcare Consultant</span></div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section class="section">
-  <div class="section-inner">
-    <p class="section-eyebrow">Experience</p>
-    <h2 class="section-heading">Research, clinical &amp; teaching roles</h2>
-    <div class="timeline">
-
-      <div class="tl-entry">
-        <span class="tl-date">Apr 2026<br>1 month</span>
-        <div class="tl-body">
-          <p class="tl-title">Clinical Observership — Pharmacovigilance</p>
-          <p class="tl-org">CRPV Hôpital Cochin, AP-HP <span>· Paris, France</span></p>
-          <div class="tl-detail">
-            <ul>
-              <li>Shadowed Dr. Laurent Chouchana's team; observed ADR assessment, causality evaluation, and signal detection processes.</li>
-              <li>Gained insight into post-market surveillance workflows, regulatory reporting, and how real-world safety data informs risk-benefit assessments.</li>
-            </ul>
-          </div>
+        <div class="sidebar-card">
+          <p class="sidebar-label">Languages</p>
+          <div class="sidebar-item"><span class="sidebar-dot"></span><span>English · French · Bengali — Native / Bilingual</span></div>
         </div>
-      </div>
-
-      <div class="tl-entry">
-        <span class="tl-date">Apr 2026<br>1 month</span>
-        <div class="tl-body">
-          <p class="tl-title">Clinical Observership &amp; Research Collaboration — OB-GYN</p>
-          <p class="tl-org">Hôpital Pitié-Salpêtrière, AP-HP <span>· Paris, France</span></p>
-          <div class="tl-detail">
-            <ul>
-              <li>Shadowed Dr. Jacky Nizard and Dr. Valentine Faure in the maternity emergency unit, observing management of high-risk pregnancies.</li>
-              <li>Collaborated with researchers at Université Paris Cité on perinatal drug safety (Safe Beginnings Project).</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-entry">
-        <span class="tl-date">Aug 2023 –<br>Present</span>
-        <div class="tl-body">
-          <p class="tl-title">Teaching Assistant — PHA 2210, PHA 6410, PHA 6225</p>
-          <p class="tl-org">Faculté de pharmacie, Université de Montréal <span>· Montréal</span></p>
-          <div class="tl-detail">
-            <ul>
-              <li>PHA 2210: Assisted PharmD students in epidemiology, evidence-based care, drug research methodology, and critical appraisal of literature.</li>
-              <li>PHA 6410 &amp; PHA 6225: Supported M.Sc. students in developing hypotheses, applying rigorous methodology, and presenting findings; delivered lecture on case-control study design.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-entry">
-        <span class="tl-date">Jan 2023 –<br>Present</span>
-        <div class="tl-body">
-          <p class="tl-title">Research Assistant — CAMCCO-L Case Studies</p>
-          <p class="tl-org">Faculté de pharmacie, Université de Montréal <span>· Montréal</span></p>
-          <div class="tl-detail">
-            <ul>
-              <li>Developed graduate-level case studies in pharmacoepidemiology for the Summer School on Medicines.</li>
-              <li>Delivered workshop at the 13th Summer School on Medicines in Barcelona, Spain.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-entry">
-        <span class="tl-date">Oct 2022 –<br>Oct 2023</span>
-        <div class="tl-body">
-          <p class="tl-title">Trainee — CAMCCO-L Curriculum</p>
-          <p class="tl-org">CAMCCO-L <span>· CIHR-funded transdisciplinary training program</span></p>
-          <div class="tl-detail">Completed 1-year curriculum covering pharmacology, epidemiology, toxicology, pharmacogenomics, methodology, and machine learning — leading to CAMCCO-L &amp; MICYRN joint certification.</div>
-        </div>
-      </div>
-
-      <div class="tl-entry">
-        <span class="tl-date">Dec 2021 –<br>Mar 2022</span>
-        <div class="tl-body">
-          <p class="tl-title">Epidemiologist — Targeted Epidemiology &amp; Biomonitoring</p>
-          <p class="tl-org">Health Canada <span>· Ottawa, Ontario</span></p>
-          <div class="tl-detail">
-            <ul>
-              <li>Conducted literature review identifying 200+ relevant biomonitoring studies; synthesized findings into a comprehensive report for the Healthy Environments and Consumer Safety Branch.</li>
-              <li>Developed concise summaries translating complex environmental epidemiology findings for policy audiences.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-entry">
-        <span class="tl-date">Apr 2021 –<br>Aug 2021</span>
-        <div class="tl-body">
-          <p class="tl-title">Planning, Programming &amp; Research Agent</p>
-          <p class="tl-org">CIUSSS Centre-Sud, Direction de santé publique <span>· Montréal</span></p>
-          <div class="tl-detail">
-            <ul>
-              <li>Identified and notified 500+ individuals potentially exposed to COVID-19 through contact tracing.</li>
-              <li>Developed risk analysis reports for high-risk locations (gyms, daycares), informing targeted public health interventions.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-entry">
-        <span class="tl-date">May 2019 –<br>Aug 2019</span>
-        <div class="tl-body">
-          <p class="tl-title">Undergraduate Research Trainee</p>
-          <p class="tl-org">CHU Sainte-Justine Research Centre <span>· Viscogliosi Laboratory · Montréal</span></p>
-          <div class="tl-detail">Pilot study on miRNA expression profiles in adolescent idiopathic scoliosis (PI: Dr. Alain Moreau). Conducted RNA extractions, RT-qPCR, and Ingenuity Pathway Analysis.</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="section section-alt">
-  <div class="section-inner">
-    <p class="section-eyebrow">Technical Skills &amp; Methods</p>
-    <h2 class="section-heading">What I work with</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <p class="skill-cat">Epidemiological Methods</p>
-        <p class="skill-list">Interrupted time series (ITS) · Difference-in-differences · Cohort &amp; case-control designs · Propensity score methods · Survival analysis · Synthetic control method · Causal inference</p>
-      </div>
-      <div class="skill-card">
-        <p class="skill-cat">Drug Safety &amp; Pharmacoepi</p>
-        <p class="skill-list">Risk management plans (RMPs) · Teratogenic/fetotoxic drug surveillance · Perinatal drug safety · Regulatory signal detection · ADR assessment · Post-market surveillance</p>
-      </div>
-      <div class="skill-card">
-        <p class="skill-cat">Real-World Data</p>
-        <p class="skill-list">Quebec Pregnancy Cohort (QPC) · AM-PREGNANT · RAMQ · MED-ECHO · ISQ · Administrative healthcare databases · Cohort construction</p>
-      </div>
-      <div class="skill-card">
-        <p class="skill-cat">Programming</p>
-        <p class="skill-list">R &amp; RStudio (primary) · Python · SAS · SQL · DBeaver · R Markdown · Git · VS Code</p>
-      </div>
-      <div class="skill-card">
-        <p class="skill-cat">Statistical Techniques</p>
-        <p class="skill-list">Segmented quasi-Poisson regression · Newey-West HAC SEs · Fourier seasonality adjustment · Negative control outcomes · Sensitivity analyses</p>
-      </div>
-      <div class="skill-card">
-        <p class="skill-cat">Communication</p>
-        <p class="skill-list">Peer-reviewed manuscripts · Grant writing · Conference presentations · Systematic &amp; literature reviews · Scientific communication (EN/FR)</p>
       </div>
     </div>
   </div>
@@ -437,8 +259,8 @@ footer a:hover{color:var(--accent)}
 <!-- PROJECTS -->
 <section class="section">
   <div class="section-inner">
-    <p class="section-eyebrow">Projects &amp; Contributions</p>
-    <h2 class="section-heading">Research initiatives I've contributed to</h2>
+    <p class="section-eyebrow">Research &amp; Projects</p>
+    <h2 class="section-heading">What I'm working on</h2>
     <div class="projects-grid">
 
       <div class="project-card">
@@ -446,7 +268,7 @@ footer a:hover{color:var(--accent)}
           <p class="proj-title">Quebec Pregnancy Cohort — Doctoral Research</p>
           <span class="proj-period">2023 – Present</span>
         </div>
-        <p class="proj-body">ITS analysis evaluating whether Canadian Risk Management Plans reduced prenatal exposure to fetotoxic medications. ~559,000 pregnancies (1998–2022), RAMQ/MED-ECHO/ISQ data. First-author publication in <em>Clinical Pharmacology &amp; Therapeutics</em> (2025).</p>
+        <p class="proj-body">Three-manuscript PhD thesis evaluating the impact of risk management plans on prenatal fetotoxic medication exposure. First paper published in <em>Clinical Pharmacology &amp; Therapeutics</em> (2025). Two projects in progress: TRIM Tool development and a U.S.–Canada REMS comparison for clozapine.</p>
         <div class="proj-tags"><span class="proj-tag">ITS</span><span class="proj-tag">Quasi-Poisson</span><span class="proj-tag">R</span><span class="proj-tag">RAMQ</span></div>
       </div>
 
@@ -455,17 +277,17 @@ footer a:hover{color:var(--accent)}
           <p class="proj-title">Safe Beginnings Project</p>
           <span class="proj-period">2024 – Present</span>
         </div>
-        <p class="proj-body">Multi-manuscript collaborative initiative for a special issue of <em>Thérapie</em>, coordinating a comparative review of mother-child cohort infrastructure in Canada and France. Includes collaboration with Université Paris Cité.</p>
+        <p class="proj-body">Multi-manuscript collaborative initiative for a special issue of <em>Thérapie</em> — a comparative review of mother-child cohort infrastructure in Canada and France, with collaboration at Université Paris Cité.</p>
         <div class="proj-tags"><span class="proj-tag">Systematic Review</span><span class="proj-tag">Perinatal</span><span class="proj-tag">France–Canada</span></div>
       </div>
 
       <div class="project-card">
         <div class="proj-header">
-          <p class="proj-title">CAMCCO-L — Canadian Mother-Child Collaborative</p>
+          <p class="proj-title">CAMCCO-L</p>
           <span class="proj-period">2022 – Present</span>
         </div>
         <p class="proj-url"><a href="https://camccol.ca" target="_blank">camccol.ca</a></p>
-        <p class="proj-body">Completed 1-year CIHR-funded transdisciplinary training program. As Research Assistant, developed graduate-level case studies and delivered workshop at the 13th Summer School on Medicines in Barcelona, Spain.</p>
+        <p class="proj-body">CIHR-funded transdisciplinary perinatal research training. As Research Assistant, developed graduate-level pharmacoepidemiology case studies and delivered a workshop at the 13th Summer School on Medicines in Barcelona, Spain.</p>
         <div class="proj-tags"><span class="proj-tag">CIHR</span><span class="proj-tag">MICYRN</span><span class="proj-tag">Barcelona</span></div>
       </div>
 
@@ -475,99 +297,10 @@ footer a:hover{color:var(--accent)}
           <span class="proj-period">2024 – 2025</span>
         </div>
         <p class="proj-url"><a href="https://healthypregnancyhub.ca" target="_blank">healthypregnancyhub.ca</a></p>
-        <p class="proj-body">Contributed to evidence-based bilingual fact sheets for Canada's national platform on medications and pregnancy — a resource built by 70+ researchers, informed by 2,000+ individuals with lived experience.</p>
+        <p class="proj-body">Contributed to evidence-based bilingual fact sheets for Canada's national platform on medications and pregnancy — built by 70+ researchers and informed by 2,000+ individuals with lived experience.</p>
         <div class="proj-tags"><span class="proj-tag">Knowledge Translation</span><span class="proj-tag">Bilingual</span><span class="proj-tag">Public Health</span></div>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- AWARDS -->
-<section class="section section-alt">
-  <div class="section-inner">
-    <p class="section-eyebrow">Honours &amp; Awards</p>
-    <h2 class="section-heading">Recognition</h2>
-    <div class="awards-list">
-      <div class="award-row">
-        <span class="award-year">2026</span>
-        <div class="award-body">
-          <p class="award-title">Excellence Award — Poster Presentation</p>
-          <p class="award-detail">CEQSCEB Epidemiology &amp; Biostatistics Symposium · ESPUM, Université de Montréal · May 21, 2026</p>
-        </div>
-      </div>
-      <div class="award-row">
-        <span class="award-year">2026</span>
-        <div class="award-body">
-          <p class="award-title">Prix d'excellence — 40th Congress Poster</p>
-          <p class="award-detail">CHU Sainte-Justine Research Centre Congress · Montréal · February 2026</p>
-        </div>
-      </div>
-      <div class="award-row">
-        <span class="award-year">2023</span>
-        <div class="award-body">
-          <p class="award-title">AI and Causal Inference Bursary / Bourse IA et inférence causale</p>
-          <p class="award-detail">Université de Montréal</p>
-        </div>
-      </div>
-      <div class="award-row">
-        <span class="award-year">2023</span>
-        <div class="award-body">
-          <p class="award-title">André-Boivin Bursary / Bourse André-Boivin</p>
-          <p class="award-detail">Faculté de pharmacie, Université de Montréal</p>
-        </div>
-      </div>
-      <div class="award-row">
-        <span class="award-year">2023</span>
-        <div class="award-body">
-          <p class="award-title">Travel Award — 13th Summer School on Medicines, Barcelona</p>
-          <p class="award-detail">CAMCCO-L / MICYRN · Barcelona, Spain</p>
-        </div>
-      </div>
-      <div class="award-row">
-        <span class="award-year">2023</span>
-        <div class="award-body">
-          <p class="award-title">Travel Award — BDRP 63rd Annual Meeting</p>
-          <p class="award-detail">Birth Defects Research for Children · Charleston, South Carolina, USA</p>
-        </div>
-      </div>
-      <div class="award-row">
-        <span class="award-year">2022</span>
-        <div class="award-body">
-          <p class="award-title">Bourse de fin d'études de maîtrise (BFEM ESP 2022)</p>
-          <p class="award-detail">End-of-Master's Degree Studies Scholarship · Études supérieures et postdoctorales, Université de Montréal</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section class="section">
-  <div class="section-inner">
-    <p class="section-eyebrow">Certifications</p>
-    <h2 class="section-heading">Additional training</h2>
-    <div class="cert-grid">
-      <div class="cert-card">
-        <div class="cert-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-        <p class="cert-text">Data Analysis with Python [DAT201] — IBM / online</p>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-        <p class="cert-text">Introduction to AI in Medicine: Support Vector Machine &amp; KNIME Analytics Platform</p>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-        <p class="cert-text">Linear Regression in R for Public Health — Imperial College London</p>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-        <p class="cert-text">Logistic Regression in R for Public Health — Imperial College London</p>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-        <p class="cert-text">CAMCCO-L &amp; MICYRN Joint Certification — Perinatal Research Transdisciplinary Training</p>
-      </div>
     </div>
   </div>
 </section>
@@ -586,12 +319,12 @@ footer a:hover{color:var(--accent)}
             <a href="mailto:nahiyan.khan@umontreal.ca">nahiyan.khan@umontreal.ca</a>
           </div>
           <div class="contact-link-row">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-            <a href="https://scholar.google.ca/citations?user=XsNp4GoAAAAJ" target="_blank">Google Scholar profile</a>
-          </div>
-          <div class="contact-link-row">
             <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             <a href="https://linkedin.com/in/nahiyan-s-khan" target="_blank">linkedin.com/in/nahiyan-s-khan</a>
+          </div>
+          <div class="contact-link-row">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            <a href="https://scholar.google.ca/citations?user=XsNp4GoAAAAJ" target="_blank">Google Scholar</a>
           </div>
           <div class="contact-link-row">
             <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
@@ -645,7 +378,6 @@ function handleContact(e){
   btn.textContent='Message sent ✓';
   btn.style.background='#2E3D5F';
   btn.disabled=true;
-  // In production wire this to Formspree: replace action with https://formspree.io/f/YOUR_ID
 }
 </script>
 </body>
