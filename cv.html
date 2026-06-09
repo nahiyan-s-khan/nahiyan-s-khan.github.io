@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV — Nahiyan Saiyara Khan</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #F8F7F4;
+    --surface: #FFFFFF;
+    --navy: #1A2340;
+    --navy-mid: #2E3D5F;
+    --muted: #6B7280;
+    --accent: #C4748A;
+    --accent-light: #F4E6EA;
+    --border: #E3E1DC;
+    --timeline: #C4748A;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--navy);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 17px;
+    color: var(--navy);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.15s;
+  }
+
+  .nav-links a:hover, .nav-links a.active {
+    color: var(--accent);
+  }
+
+  .page-header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 3.5rem 2rem 2.5rem;
+  }
+
+  .page-header-inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .page-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .page-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+  }
+
+  .page-subtitle {
+    font-size: 14px;
+    color: var(--muted);
+    max-width: 480px;
+  }
+
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 1.25rem;
+    padding: 8px 18px;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+
+  .download-btn:hover {
+    background: var(--accent-light);
+  }
+
+  main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 3rem 2rem 5rem;
+  }
+
+  .cv-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 0;
+  }
+
+  .section {
+    display: contents;
+  }
+
+  .section-label {
+    padding: 2.5rem 2rem 0 0;
+  }
+
+  .section-label-text {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    position: sticky;
+    top: 76px;
+  }
+
+  .section-content {
+    border-top: 1px solid var(--border);
+    padding: 2.5rem 0;
+  }
+
+  .section-content:first-of-type {
+    border-top: none;
+  }
+
+  /* Bio section */
+  .bio-text {
+    font-size: 15px;
+    color: var(--navy-mid);
+    line-height: 1.8;
+    max-width: 520px;
+  }
+
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 1.25rem;
+  }
+
+  .tag {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: var(--accent-light);
+    color: var(--accent);
+    border: 1px solid #E8C0CC;
+  }
+
+  /* Timeline entries */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .timeline-entry {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 1.25rem;
+    padding: 0 0 2rem 0;
+    position: relative;
+  }
+
+  .timeline-entry::before {
+    content: '';
+    position: absolute;
+    left: 122px;
+    top: 8px;
+    bottom: 0;
+    width: 1px;
+    background: var(--border);
+  }
+
+  .timeline-entry:last-child::before {
+    display: none;
+  }
+
+  .timeline-date {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--muted);
+    padding-top: 3px;
+    text-align: right;
+  }
+
+  .timeline-body {
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .timeline-body::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 8px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg);
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+
+  .timeline-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.3;
+  }
+
+  .timeline-org {
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-top: 2px;
+  }
+
+  .timeline-detail {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 4px;
+    line-height: 1.6;
+  }
+
+  .timeline-detail ul {
+    margin: 6px 0 0 1rem;
+    list-style: disc;
+  }
+
+  .timeline-detail li {
+    margin-bottom: 3px;
+  }
+
+  /* Education */
+  .edu-entry {
+    margin-bottom: 1.5rem;
+  }
+
+  .edu-entry:last-child {
+    margin-bottom: 0;
+  }
+
+  .edu-degree {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .edu-uni {
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .edu-meta {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* Skills grid */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+
+  .skill-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem 1.1rem;
+  }
+
+  .skill-category {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  .skill-list {
+    font-size: 13px;
+    color: var(--navy-mid);
+    line-height: 1.7;
+  }
+
+  /* Awards */
+  .award-entry {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .award-entry:last-child {
+    border-bottom: none;
+  }
+
+  .award-year {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+    min-width: 36px;
+    padding-top: 2px;
+  }
+
+  .award-text {
+    font-size: 14px;
+    color: var(--navy-mid);
+  }
+
+  .award-text strong {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  /* Contact */
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--navy-mid);
+  }
+
+  .contact-item a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .contact-item a:hover {
+    text-decoration: underline;
+  }
+
+  .contact-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+    min-width: 80px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 12px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 640px) {
+    .cv-grid { grid-template-columns: 1fr; }
+    .section-label { padding: 2rem 0 0.25rem; }
+    .section-label-text { position: static; }
+    .section-content { border-top: none; padding: 0.5rem 0 2rem; }
+    .timeline-entry { grid-template-columns: 80px 1fr; }
+    .timeline-entry::before { left: 92px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-name">Nahiyan Saiyara Khan</a>
+  <ul class="nav-links">
+    <li><a href="https://nahiyan-saiyara-khan.notion.site/Hi-I-m-Nahiyan-49aa1b6caacd82198e6f0157b75c6e96" target="_blank">About</a></li>
+    <li><a href="cv.html" class="active">CV</a></li>
+    <li><a href="publications.html">Publications</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-eyebrow">Curriculum Vitae</p>
+    <h1 class="page-title">Nahiyan Saiyara Khan, M.Sc.</h1>
+    <p class="page-subtitle">PhD Candidate in Pharmaceutical Sciences (Pharmacoepidemiology) · Université de Montréal</p>
+    <a href="#" class="download-btn">↓ Download PDF</a>
+  </div>
+</div>
+
+<main>
+  <div class="cv-grid">
+
+    <!-- About -->
+    <div class="section">
+      <div class="section-label">
+        <p class="section-label-text">About</p>
+      </div>
+      <div class="section-content">
+        <p class="bio-text">PhD candidate in pharmacoepidemiology at the Azrieli Research Centre, CHU Sainte-Justine, supervised by Prof. Anick Bérard (Canada Research Chair, Tier 1). My doctoral research uses causal inference methods — primarily interrupted time series — to evaluate the impact of risk management plans on prenatal exposure to fetotoxic medications, leveraging the Quebec Pregnancy Cohort (~559K pregnancies, 1998–2022).</p>
+        <div class="tag-row">
+          <span class="tag">Pharmacoepidemiology</span>
+          <span class="tag">Causal Inference</span>
+          <span class="tag">RWE / HEOR</span>
+          <span class="tag">Drug Safety</span>
+          <span class="tag">Pharmacovigilance</span>
+          <span class="tag">ITS Analysis</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+      <div class="section-label">
+        <p class="section-label-text">Education</p>
+      </div>
+      <div class="section-content">
+        <div class="edu-entry">
+          <p class="edu-degree">PhD, Pharmaceutical Sciences (Pharmacoepidemiology)</p>
+          <p class="edu-uni">Université de Montréal · Faculty of Pharmacy</p>
+          <p class="edu-meta">2021 – Present &nbsp;·&nbsp; GPA 4.30 &nbsp;·&nbsp; Comprehensive exam passed May 2025</p>
+        </div>
+        <div class="edu-entry">
+          <p class="edu-degree">M.Sc., Occupational &amp; Environmental Health</p>
+          <p class="edu-uni">Université de Montréal · École de santé publique (ESPUM)</p>
+          <p class="edu-meta">2019 – 2021 &nbsp;·&nbsp; Environmental epidemiology &amp; toxicology thesis</p>
+        </div>
+        <div class="edu-entry">
+          <p class="edu-degree">B.Sc., Biochemistry &amp; Molecular Medicine</p>
+          <p class="edu-uni">Université de Montréal</p>
+          <p class="edu-meta">2017 – 2019</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Research Experience -->
+    <div class="section">
+      <div class="section-label">
+        <p class="section-label-text">Research</p>
+      </div>
+      <div class="section-content">
+        <div class="timeline">
+
+          <div class="timeline-entry">
+            <span class="timeline-date">2021 – Present</span>
+            <div class="timeline-body">
+              <p class="timeline-title">Doctoral Researcher</p>
+              <p class="timeline-org">Azrieli Research Centre, CHU Sainte-Justine · Université de Montréal</p>
+              <div class="timeline-detail">
+                ITS analysis of risk management plans (RMPs) on prenatal fetotoxic medication exposure using the Quebec Pregnancy Cohort (RAMQ/MED-ECHO/ISQ). First-author manuscript published in <em>Clinical Pharmacology &amp; Therapeutics</em> (2025).
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-entry">
+            <span class="timeline-date">Apr 2026</span>
+            <div class="timeline-body">
+              <p class="timeline-title">Clinical Observership — Pharmacovigilance</p>
+              <p class="timeline-org">CRPV, Hôpital Cochin · AP-HP, Paris</p>
+              <div class="timeline-detail">Pharmacovigilance shadowing with Dr. Laurent Chouchana's team. Also completed OB-GYN shadowing at Hôpital Pitié-Salpêtrière (Dr. Nizard, Dr. Faure).</div>
+            </div>
+          </div>
+
+          <div class="timeline-entry">
+            <span class="timeline-date">2022 – 2023</span>
+            <div class="timeline-body">
+              <p class="timeline-title">Epidemiologist (Contract)</p>
+              <p class="timeline-org">Health Canada</p>
+              <div class="timeline-detail">Personal care product use and biomonitoring in youth ages 7–17.</div>
+            </div>
+          </div>
+
+          <div class="timeline-entry">
+            <span class="timeline-date">2020 – 2021</span>
+            <div class="timeline-body">
+              <p class="timeline-title">Planning, Programming &amp; Research Agent</p>
+              <p class="timeline-org">Direction régionale de santé publique de Montréal</p>
+              <div class="timeline-detail">COVID-19 contact tracing program coordination and surveillance.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="section">
+      <div class="section-label">
+        <p class="section-label-text">Skills</p>
+      </div>
+      <div class="section-content">
+        <div class="skills-grid">
+          <div class="skill-block">
+            <p class="skill-category">Statistical</p>
+            <p class="skill-list">Interrupted time series · Segmented Poisson regression · Propensity score methods · Fourier seasonality · Newey-West HAC SEs</p>
+          </div>
+          <div class="skill-block">
+            <p class="skill-category">Programming</p>
+            <p class="skill-list">R (primary) · Python · SAS · SQL</p>
+          </div>
+          <div class="skill-block">
+            <p class="skill-category">Data</p>
+            <p class="skill-list">RAMQ / MED-ECHO / ISQ administrative data · Quebec Pregnancy Cohort · DBeaver</p>
+          </div>
+          <div class="skill-block">
+            <p class="skill-category">Languages</p>
+            <p class="skill-list">English (fluent) · French (fluent) · Bengali (native)</p>
+          </div>
+          <div class="skill-block">
+            <p class="skill-category">Domain</p>
+            <p class="skill-list">Drug safety · Pharmacovigilance · RWE · HEOR · Perinatal epidemiology</p>
+          </div>
+          <div class="skill-block">
+            <p class="skill-category">Tools</p>
+            <p class="skill-list">R Markdown · Git · VS Code · Notion · REDCap</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Honours -->
+    <div class="section">
+      <div class="section-label">
+        <p class="section-label-text">Honours</p>
+      </div>
+      <div class="section-content">
+        <div class="award-entry">
+          <span class="award-year">2026</span>
+          <p class="award-text"><strong>Excellence Award — Poster Presentation</strong> · CEQSCEB Epidemiology &amp; Biostatistics Symposium, ESPUM</p>
+        </div>
+        <div class="award-entry">
+          <span class="award-year">2026</span>
+          <p class="award-text"><strong>Prix d'excellence</strong> · 40th Congress, CHU Sainte-Justine</p>
+        </div>
+        <div class="award-entry">
+          <span class="award-year">2025</span>
+          <p class="award-text"><strong>ICPE 2026 Poster Presentation</strong> · International Society for Pharmacoepidemiology, Milan</p>
+        </div>
+        <div class="award-entry">
+          <span class="award-year">2023</span>
+          <p class="award-text"><strong>Faculty Bursary &amp; UdeM International Mobility Bursary</strong> · Université de Montréal</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="section">
+      <div class="section-label">
+        <p class="section-label-text">Contact</p>
+      </div>
+      <div class="section-content">
+        <div class="contact-list">
+          <div class="contact-item">
+            <span class="contact-label">Location</span>
+            Montréal, Québec, Canada
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Website</span>
+            <a href="https://nahiyan-saiyara-khan.notion.site/Hi-I-m-Nahiyan-49aa1b6caacd82198e6f0157b75c6e96" target="_blank">nahiyan-saiyara-khan.notion.site</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://linkedin.com/in/nahiyan-saiyara-khan" target="_blank">linkedin.com/in/nahiyan-saiyara-khan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  © 2026 Nahiyan Saiyara Khan &nbsp;·&nbsp; <a href="publications.html" style="color: var(--accent); text-decoration: none;">Publications →</a>
+</footer>
+
+</body>
+</html>
