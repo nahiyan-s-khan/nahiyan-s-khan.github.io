@@ -13,11 +13,11 @@
 body{background:var(--bg);color:var(--navy);font-family:'Inter',sans-serif;font-size:15px;line-height:1.7}
 nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:58px;position:sticky;top:0;z-index:200}
 .nav-name{font-family:'DM Serif Display',serif;font-size:18px;color:var(--navy);text-decoration:none}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:.02em;transition:color .15s}
-.nav-links a:hover,.nav-links a.active{color:var(--accent)}
-.nav-cta{font-size:12px;font-weight:600;padding:6px 16px;border:1px solid var(--accent);border-radius:4px;color:var(--accent);text-decoration:none;transition:background .15s}
-.nav-cta:hover{background:var(--accent-light)}
+.nav-links{display:flex;gap:6px;list-style:none;align-items:center}
+.nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;padding:6px 16px;border-radius:20px;transition:background .15s,color .15s}
+.nav-links a:hover{background:var(--bg);color:var(--navy)}.nav-links a.active{background:var(--navy);color:#fff!important}
+.nav-cta{font-size:13px;font-weight:600;padding:6px 16px;border-radius:20px;background:var(--accent);color:#fff!important;text-decoration:none;transition:opacity .15s}
+.nav-cta:hover{opacity:.85}
 
 .page-header{background:var(--surface);border-bottom:1px solid var(--border);padding:4rem 2.5rem 3rem}
 .page-header-inner{max-width:840px;margin:0 auto}
@@ -57,10 +57,10 @@ main{max-width:840px;margin:0 auto;padding:3.5rem 2.5rem 5rem}
 .tl-detail ul{margin:.4rem 0 0 1rem;list-style:disc}
 .tl-detail li{margin-bottom:3px}
 
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:.9rem}
-.skill-card{background:var(--surface);border:1px solid var(--border);border-radius:7px;padding:1.1rem 1.25rem}
-.skill-cat{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
-.skill-list{font-size:13px;color:var(--navy-mid);line-height:1.65}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.skill-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.1rem 1.25rem;border-top:3px solid var(--accent)}.skill-card.alt{border-top-color:var(--navy)}
+.skill-cat{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;margin-bottom:.75rem}.skill-card .skill-cat{color:var(--accent)}.skill-card.alt .skill-cat{color:var(--navy)}
+.pill-row{display:flex;flex-wrap:wrap;gap:6px}.pill{font-size:12px;padding:3px 11px;border-radius:20px;background:var(--accent-light);color:#7a3f52;border:1px solid #e8c0cc}.pill.alt{background:#e8eaf0;color:var(--navy);border-color:#c5cad8}
 
 .award-row{display:grid;grid-template-columns:80px 1fr;gap:1.25rem;padding:.9rem 0;border-bottom:1px solid var(--border)}
 .award-row:last-child{border-bottom:none}
@@ -99,6 +99,7 @@ footer a{color:var(--accent);text-decoration:none}
     <li><a href="about.html">About</a></li>
     <li><a href="cv.html" class="active">CV</a></li>
     <li><a href="publications.html">Publications</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
     <li><a href="about.html#contact" class="nav-cta">Contact</a></li>
   </ul>
 </nav>
@@ -195,7 +196,7 @@ footer a{color:var(--accent);text-decoration:none}
       </div>
 
       <div class="tl-entry">
-        <span class="tl-date">Aug 2025 –<br>Jan 2026</span>
+        <span class="tl-date">Aug 2025 –<br>Present</span>
         <div class="tl-body">
           <p class="tl-title">Teaching Assistant — PHA 6410: Projet en pratique pharmaceutique</p>
           <p class="tl-org">Faculté de pharmacie, Université de Montréal <span>· M.Sc. in Advanced Pharmacotherapy</span></p>
@@ -226,7 +227,8 @@ footer a{color:var(--accent);text-decoration:none}
           <p class="tl-org">Faculté de pharmacie, Université de Montréal</p>
           <div class="tl-detail"><ul>
             <li>Developed graduate-level pharmacoepidemiology case studies for the Summer School on Medicines.</li>
-            <li>Delivered workshop at the 13th Summer School on Medicines, Barcelona, Spain.</li>
+            <li>Delivered workshop at the 13th Summer School on Medicines, Barcelona, Spain (July 2023).</li>
+            <li>Delivered workshop again at the 14th Summer School on Medicines, Montréal, Canada (July 2025).</li>
           </ul></div>
         </div>
       </div>
@@ -290,27 +292,39 @@ footer a{color:var(--accent);text-decoration:none}
     <div class="skills-grid">
       <div class="skill-card">
         <p class="skill-cat">Epidemiological Methods</p>
-        <p class="skill-list">ITS · DiD · Cohort &amp; case-control designs · Propensity score methods · Survival analysis · Synthetic control · Causal inference</p>
+        <div class="pill-row">
+          <span class="pill">ITS</span><span class="pill">DiD</span><span class="pill">Cohort & case-control</span><span class="pill">Propensity score</span><span class="pill">Survival analysis</span><span class="pill">Synthetic control</span><span class="pill">Causal inference</span>
+        </div>
       </div>
-      <div class="skill-card">
+      <div class="skill-card alt">
         <p class="skill-cat">Statistical Techniques</p>
-        <p class="skill-list">Segmented quasi-Poisson regression · Newey-West HAC SEs · Fourier seasonality · Negative control outcomes</p>
+        <div class="pill-row">
+          <span class="pill alt">Quasi-Poisson regression</span><span class="pill alt">Newey-West HAC SEs</span><span class="pill alt">Fourier seasonality</span><span class="pill alt">Negative control outcomes</span>
+        </div>
       </div>
       <div class="skill-card">
         <p class="skill-cat">Drug Safety &amp; Pharmacoepi</p>
-        <p class="skill-list">RMPs · Teratogenic drug surveillance · ADR assessment · Signal detection · Post-market surveillance · Perinatal drug safety</p>
+        <div class="pill-row">
+          <span class="pill">RMPs</span><span class="pill">ADR assessment</span><span class="pill">Signal detection</span><span class="pill">Post-market surveillance</span><span class="pill">Perinatal drug safety</span>
+        </div>
       </div>
-      <div class="skill-card">
+      <div class="skill-card alt">
         <p class="skill-cat">Real-World Data</p>
-        <p class="skill-list">QPC · AM-PREGNANT · RAMQ · MED-ECHO · ISQ · Administrative databases · Cohort construction</p>
+        <div class="pill-row">
+          <span class="pill alt">QPC</span><span class="pill alt">AM-PREGNANT</span><span class="pill alt">RAMQ</span><span class="pill alt">MED-ECHO</span><span class="pill alt">ISQ</span><span class="pill alt">Admin databases</span>
+        </div>
       </div>
       <div class="skill-card">
-        <p class="skill-cat">Programming</p>
-        <p class="skill-list">R &amp; RStudio (primary) · Python · SAS · SQL · DBeaver · R Markdown · Git · VS Code</p>
+        <p class="skill-cat">Programming &amp; Tools</p>
+        <div class="pill-row">
+          <span class="pill">R & RStudio</span><span class="pill">Python</span><span class="pill">SAS</span><span class="pill">SQL</span><span class="pill">VS Code</span><span class="pill">GraphPad Prism</span><span class="pill">R Markdown</span><span class="pill">Git</span>
+        </div>
       </div>
-      <div class="skill-card">
+      <div class="skill-card alt">
         <p class="skill-cat">Languages</p>
-        <p class="skill-list">English — Native/Bilingual<br>French — Native/Bilingual<br>Bengali — Native/Bilingual</p>
+        <div class="pill-row">
+          <span class="pill alt">English — Native</span><span class="pill alt">French — Native</span><span class="pill alt">Bengali — Native</span>
+        </div>
       </div>
     </div>
   </div>
@@ -318,12 +332,12 @@ footer a{color:var(--accent);text-decoration:none}
   <div class="cv-label"><p class="cv-label-text">Honours</p></div>
   <div class="cv-content">
     <div class="award-row"><span class="award-year">2026</span><div><p class="award-title">Excellence Award — Poster Presentation</p><p class="award-detail">CEQSCEB Epidemiology &amp; Biostatistics Symposium · ESPUM, May 2026</p></div></div>
-    <div class="award-row"><span class="award-year">2026</span><div><p class="award-title">Prix d'excellence</p><p class="award-detail">40th Congress · CHU Sainte-Justine · February 2026</p></div></div>
-    <div class="award-row"><span class="award-year">2023</span><div><p class="award-title">AI and Causal Inference Bursary</p><p class="award-detail">Université de Montréal</p></div></div>
-    <div class="award-row"><span class="award-year">2023</span><div><p class="award-title">André-Boivin Bursary</p><p class="award-detail">Faculté de pharmacie, Université de Montréal</p></div></div>
-    <div class="award-row"><span class="award-year">2023</span><div><p class="award-title">Travel Award — 13th Summer School on Medicines</p><p class="award-detail">CAMCCO-L / MICYRN · Barcelona, Spain</p></div></div>
-    <div class="award-row"><span class="award-year">2023</span><div><p class="award-title">Travel Award — BDRP 63rd Annual Meeting</p><p class="award-detail">Charleston, South Carolina, USA</p></div></div>
-    <div class="award-row"><span class="award-year">2022</span><div><p class="award-title">Bourse de fin d'études de maîtrise (BFEM ESP 2022)</p><p class="award-detail">Études supérieures et postdoctorales · Université de Montréal</p></div></div>
+    <div class="award-row"><span class="award-year">2026</span><div><p class="award-title">Excellence Award (Prix d'excellence)</p><p class="award-detail">40th Congress · CHU Sainte-Justine · February 2026</p></div></div>
+    <div class="award-row"><span class="award-year">2023</span><div><p class="award-title">AI and Causal Inference Bursary (Bourse IA et inférence causale)</p><p class="award-detail">Université de Montréal</p></div></div>
+    <div class="award-row"><span class="award-year">2023</span><div><p class="award-title">André-Boivin Bursary (Bourse André-Boivin)</p><p class="award-detail">Faculté de pharmacie, Université de Montréal</p></div></div>
+    <div class="award-row"><span class="award-year">2023</span><div><p class="award-title">Travel Award — 13th Summer School on Medicines (Bourse de voyage — 13e École d'été sur les médicaments)</p><p class="award-detail">CAMCCO-L / MICYRN · Barcelona, Spain</p></div></div>
+    <div class="award-row"><span class="award-year">2023</span><div><p class="award-title">Travel Award — BDRP 63rd Annual Meeting (Bourse de voyage — 63e réunion annuelle BDRP)</p><p class="award-detail">Charleston, South Carolina, USA</p></div></div>
+    <div class="award-row"><span class="award-year">2022</span><div><p class="award-title">End-of-Master's Degree Studies Scholarship (Bourse de fin d'études de maîtrise — BFEM ESP 2022)</p><p class="award-detail">Graduate and Postdoctoral Studies (Études supérieures et postdoctorales) · Université de Montréal</p></div></div>
   </div>
 
   <div class="cv-label"><p class="cv-label-text">Certifications</p></div>

@@ -7,7 +7,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nahiyan Saiyara Khan — Pharmacoepidemiology Researcher</title>
 <meta name="description" content="PhD Candidate in Pharmaceutical Sciences at Université de Montréal. Causal inference, real-world data, drug safety, pharmacovigilance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<style>
+  /* Hide Caveat text until font loads to prevent FOUC */
+  .hero-name { visibility: hidden; }
+  .fonts-loaded .hero-name { visibility: visible; }
+</style>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -20,11 +27,11 @@ body{background:var(--bg);color:var(--navy);font-family:'Inter',sans-serif;font-
 /* NAV */
 nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:58px;position:sticky;top:0;z-index:200}
 .nav-name{font-family:'DM Serif Display',serif;font-size:18px;color:var(--navy);text-decoration:none}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:.02em;transition:color .15s}
-.nav-links a:hover,.nav-links a.active{color:var(--accent)}
-.nav-cta{font-size:12px;font-weight:600;padding:6px 16px;border:1px solid var(--accent);border-radius:4px;color:var(--accent);text-decoration:none;transition:background .15s}
-.nav-cta:hover{background:var(--accent-light)}
+.nav-links{display:flex;gap:6px;list-style:none;align-items:center}
+.nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;padding:6px 16px;border-radius:20px;transition:background .15s,color .15s}
+.nav-links a:hover{background:var(--bg);color:var(--navy)}.nav-links a.active{background:var(--navy);color:#fff!important}
+.nav-cta{font-size:13px;font-weight:600;padding:6px 16px;border-radius:20px;background:var(--accent);color:#fff!important;text-decoration:none;transition:opacity .15s}
+.nav-cta:hover{opacity:.85}
 
 /* ARTICLE BANNER */
 .article-banner{background:var(--navy);padding:.85rem 2.5rem;display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap}
@@ -146,6 +153,7 @@ footer a:hover{color:var(--accent)}
     <li><a href="about.html" class="active">About</a></li>
     <li><a href="cv.html">CV</a></li>
     <li><a href="publications.html">Publications</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
     <li><a href="#contact" class="nav-cta">Contact</a></li>
   </ul>
 </nav>
@@ -280,7 +288,7 @@ footer a:hover{color:var(--accent)}
           <span class="proj-period">2024 – Present</span>
         </div>
         <p class="proj-body">Multi-manuscript collaborative initiative for a special issue of <em>Thérapie</em> — a comparative review of mother-child cohort infrastructure in Canada and France, with collaboration at Université Paris Cité.</p>
-        <div class="proj-tags"><span class="proj-tag">Narrative Review</span><span class="proj-tag">Perinatal</span><span class="proj-tag">France–Canada</span></div>
+        <div class="proj-tags"><span class="proj-tag">Systematic Review</span><span class="proj-tag">Perinatal</span><span class="proj-tag">France–Canada</span></div>
       </div>
 
       <div class="project-card">
@@ -373,6 +381,13 @@ footer a:hover{color:var(--accent)}
   </div>
 </footer>
 
+<script>
+document.fonts.load('700 1em Caveat').then(() => {
+  document.documentElement.classList.add('fonts-loaded');
+});
+// Fallback: show after 1s no matter what
+setTimeout(() => document.documentElement.classList.add('fonts-loaded'), 1000);
+</script>
 <script>
 function handleContact(e){
   e.preventDefault();

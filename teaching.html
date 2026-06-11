@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teaching — Nahiyan Saiyara Khan</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#F8F7F4;--surface:#fff;--navy:#1A2340;--navy-mid:#2E3D5F;--muted:#6B7280;--accent:#C4748A;--accent-light:#F4E6EA;--border:#E3E1DC;--border-mid:#D5D2CC}
+body{background:var(--bg);color:var(--navy);font-family:'Inter',sans-serif;font-size:15px;line-height:1.7}
+
+nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:58px;position:sticky;top:0;z-index:200}
+.nav-name{font-family:'DM Serif Display',serif;font-size:18px;color:var(--navy);text-decoration:none}
+.nav-links{display:flex;gap:6px;list-style:none;align-items:center}
+.nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;padding:6px 16px;border-radius:20px;transition:background .15s,color .15s}
+.nav-links a:hover{background:var(--bg);color:var(--navy)}
+.nav-links a.active{background:var(--navy);color:#fff!important}
+.nav-cta{font-size:13px;font-weight:600;padding:6px 16px;border-radius:20px;background:var(--accent);color:#fff!important;text-decoration:none;transition:opacity .15s}
+.nav-cta:hover{opacity:.85}
+
+.page-header{background:var(--surface);border-bottom:1px solid var(--border);padding:4rem 2.5rem 3rem}
+.page-header-inner{max-width:900px;margin:0 auto}
+.page-eyebrow{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem}
+.page-title{font-family:'DM Serif Display',serif;font-size:40px;color:var(--navy);line-height:1.1;margin-bottom:.75rem}
+.page-sub{font-size:15px;color:var(--navy-mid);line-height:1.85;max-width:620px}
+
+main{max-width:900px;margin:0 auto;padding:3.5rem 2.5rem 5rem}
+
+/* STATS */
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:3.5rem}
+.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.4rem 1.5rem;text-align:center}
+.stat-num{font-family:'DM Serif Display',serif;font-size:36px;color:var(--navy);line-height:1;margin-bottom:6px}
+.stat-num sup{font-size:18px;color:var(--accent)}
+.stat-label{font-size:12px;color:var(--muted);line-height:1.5}
+
+/* SECTION */
+.section-eyebrow{font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);padding-bottom:.75rem;border-bottom:1px solid var(--border);margin-bottom:1.5rem}
+.mb-section{margin-bottom:3.5rem}
+
+/* TA CARDS */
+.ta-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.1rem}
+.ta-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color .15s,transform .15s}
+.ta-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.ta-card-top{background:var(--navy);padding:.65rem 1.1rem;display:flex;align-items:center;justify-content:space-between}
+.ta-card-top.alt{background:var(--accent-light)}
+.ta-course{font-size:11px;font-weight:600;color:rgba(255,255,255,.65);letter-spacing:.04em}
+.ta-course.alt{color:var(--accent)}
+.ta-period{font-size:11px;color:rgba(255,255,255,.4)}
+.ta-period.alt{color:var(--muted)}
+.ta-body{padding:1.1rem}
+.ta-title{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px;line-height:1.4}
+.ta-program{font-size:12px;color:var(--accent);font-weight:500;margin-bottom:6px}
+.ta-desc{font-size:12px;color:var(--muted);line-height:1.6}
+.ta-badge{display:inline-flex;align-items:center;gap:5px;margin-top:.75rem;font-size:11px;font-weight:600;padding:3px 11px;border-radius:20px;background:var(--accent-light);color:var(--accent);border:1px solid #e8c0cc}
+.ta-highlight{font-size:12px;color:var(--navy-mid);margin-top:8px;padding:.6rem .75rem;background:var(--bg);border-radius:5px;border-left:2px solid var(--accent);line-height:1.5}
+
+/* WORKSHOPS */
+.ws-list{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.ws-row{display:grid;grid-template-columns:72px 1fr;gap:1.25rem;padding:1.1rem 1.5rem;border-bottom:1px solid var(--border);align-items:start}
+.ws-row:last-child{border-bottom:none}
+.ws-date{font-size:11px;font-weight:600;color:var(--accent);letter-spacing:.06em;text-transform:uppercase;padding-top:2px;text-align:right;line-height:1.5}
+.ws-title{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:3px;line-height:1.4}
+.ws-detail{font-size:12px;color:var(--muted);line-height:1.5}
+.ws-badge{display:inline-block;font-size:11px;font-weight:500;padding:2px 10px;border-radius:20px;margin-top:6px}
+.ws-badge.workshop{background:#FEF9EC;color:#8A6200;border:1px solid #E8CF80}
+
+footer{background:var(--navy);padding:2.5rem;text-align:center}
+.footer-inner{max-width:900px;margin:0 auto}
+footer p{font-size:12px;color:rgba(255,255,255,.4)}
+footer a{color:rgba(255,255,255,.6);text-decoration:none}
+footer a:hover{color:var(--accent)}
+.footer-links{display:flex;justify-content:center;gap:2rem;margin-bottom:1rem;flex-wrap:wrap}
+.footer-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.6);text-decoration:none;transition:color .15s}
+.footer-links a:hover{color:var(--accent)}
+
+@media(max-width:680px){
+  nav,.page-header,main{padding-left:1.25rem;padding-right:1.25rem}
+  .stats-row{grid-template-columns:1fr}
+  .ta-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="about.html" class="nav-name">Nahiyan Saiyara Khan</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="teaching.html" class="active">Teaching</a></li>
+    <li><a href="about.html#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-eyebrow">Teaching & Science Communication</p>
+    <h1 class="page-title">Teaching Portfolio</h1>
+    <p class="page-sub">One of the things I love most about research is sharing it. Whether I'm guiding PharmD students through their first critical appraisal of a clinical trial, building a pharmacoepidemiology workshop for international trainees, or helping graduate students develop their first research protocol — I find that teaching makes me a better scientist. Preparing a course forces you to understand your material deeply, and watching students connect the dots is genuinely one of the best parts of academic life.</p>
+  </div>
+</div>
+
+<main>
+
+  <!-- STATS -->
+  <div class="stats-row">
+    <div class="stat-card">
+      <p class="stat-num">4</p>
+      <p class="stat-label">University courses taught across Pharm.D., M.Sc., and MPH programs</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-num">2</p>
+      <p class="stat-label">International workshops delivered — Barcelona (2023) & Montréal (2025)</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-num">EN/FR</p>
+      <p class="stat-label">Bilingual teaching in English and French across all levels</p>
+    </div>
+  </div>
+
+  <!-- TA ROLES -->
+  <div class="mb-section">
+    <h2 class="section-eyebrow">Teaching Assistant Roles</h2>
+    <div class="ta-grid">
+
+      <div class="ta-card">
+        <div class="ta-card-top">
+          <span class="ta-course">PHA 2210</span>
+          <span class="ta-period">Aug 2023 – Present</span>
+        </div>
+        <div class="ta-body">
+          <p class="ta-title">Le pharmacien et le savoir scientifique</p>
+          <p class="ta-program">Pharm.D. · Faculté de pharmacie, Université de Montréal</p>
+          <p class="ta-desc">Assisted PharmD students in mastering epidemiology, evidence-based care, drug research methodology, applied statistics, and critical appraisal of scientific literature. Corrected group assignments, oral presentations, and individual exams.</p>
+          <span class="ta-badge">Teaching Assistant</span>
+        </div>
+      </div>
+
+      <div class="ta-card">
+        <div class="ta-card-top">
+          <span class="ta-course">PHA 6410</span>
+          <span class="ta-period">Aug 2025 – Present</span>
+        </div>
+        <div class="ta-body">
+          <p class="ta-title">Projet en pratique pharmaceutique</p>
+          <p class="ta-program">M.Sc. in Advanced Pharmacotherapy · Faculté de pharmacie, UdeM</p>
+          <p class="ta-desc">Supported PharmD graduates training for careers in hospital and ambulatory pharmacy practice. Guided students in developing hypotheses, applying rigorous methodology, analysing data, and presenting findings. Evaluated directed research projects.</p>
+          <span class="ta-badge">Teaching Assistant</span>
+        </div>
+      </div>
+
+      <div class="ta-card">
+        <div class="ta-card-top">
+          <span class="ta-course">PHA 6225</span>
+          <span class="ta-period">Aug – Dec 2025</span>
+        </div>
+        <div class="ta-body">
+          <p class="ta-title">Méthodologie de la recherche en pharmacie</p>
+          <p class="ta-program">M.Sc. in Advanced Pharmacotherapy · Faculté de pharmacie, UdeM</p>
+          <p class="ta-desc">Supported PharmD graduates specialising in advanced clinical practice. Taught core elements of research methodology including case-control study design and protocol development.</p>
+          <div class="ta-highlight">✦ Delivered lecture on case-control study design</div>
+          <span class="ta-badge">Teaching Assistant</span>
+        </div>
+      </div>
+
+      <div class="ta-card">
+        <div class="ta-card-top alt">
+          <span class="ta-course alt">MSN 6024</span>
+          <span class="ta-period alt">Jan – Apr 2023</span>
+        </div>
+        <div class="ta-body">
+          <p class="ta-title">Ventilation et protection individuelle</p>
+          <p class="ta-program">Master of Public Health (MPH) · ESPUM, Université de Montréal</p>
+          <p class="ta-desc">Monitored and documented exam procedures, coordinated new security measures with professors, and provided detailed performance trend reports to support targeted student interventions.</p>
+          <span class="ta-badge">Teaching Assistant</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WORKSHOPS -->
+  <div class="mb-section">
+    <h2 class="section-eyebrow">Workshops & Science Communication</h2>
+    <div class="ws-list">
+
+      <div class="ws-row">
+        <span class="ws-date">Jul 2025</span>
+        <div>
+          <p class="ws-title">Workshop — Pharmacoepidemiology Case Studies</p>
+          <p class="ws-detail">14th Summer School on Medicines · CAMCCO-L / MICYRN · Montréal, Québec, Canada</p>
+          <p class="ws-detail" style="margin-top:4px">Redeveloped and delivered workshop on pharmacoepidemiology methods for international trainees from Canada and France, with updated case studies drawing from the Quebec Pregnancy Cohort.</p>
+          <span class="ws-badge workshop">Workshop</span>
+        </div>
+      </div>
+
+      <div class="ws-row">
+        <span class="ws-date">Jul 2023</span>
+        <div>
+          <p class="ws-title">Workshop — Pharmacoepidemiology Case Studies</p>
+          <p class="ws-detail">13th Summer School on Medicines · CAMCCO-L / MICYRN · Barcelona, Spain</p>
+          <p class="ws-detail" style="margin-top:4px">First delivery of graduate-level pharmacoepidemiology case studies developed as part of the CAMCCO-L Research Assistant role. Workshop delivered in English to an international audience.</p>
+          <span class="ws-badge workshop">Workshop</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="cv.html">CV</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="mailto:nahiyan.khan@umontreal.ca">Email</a>
+      <a href="https://linkedin.com/in/nahiyan-s-khan" target="_blank">LinkedIn</a>
+    </div>
+    <p>© 2026 Nahiyan Saiyara Khan, M.Sc. &nbsp;·&nbsp; Montréal, Québec, Canada</p>
+  </div>
+</footer>
+
+</body>
+</html>
