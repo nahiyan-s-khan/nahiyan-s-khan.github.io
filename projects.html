@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Nahiyan Saiyara Khan</title>
+<meta name="description" content="Research projects by Nahiyan Saiyara Khan — pharmacoepidemiology, drug safety, risk management plans, and mother-child cohort science.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#F8F7F4;--surface:#fff;--navy:#1A2340;--navy-mid:#2E3D5F;--muted:#6B7280;--accent:#C4748A;--accent-light:#F4E6EA;--border:#E3E1DC;--border-mid:#D5D2CC}
+body{background:var(--bg);color:var(--navy);font-family:'Inter',sans-serif;font-size:15px;line-height:1.7}
+nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:58px;position:sticky;top:0;z-index:200}
+.nav-name{font-family:'DM Serif Display',serif;font-size:18px;color:var(--navy);text-decoration:none}
+.nav-links{display:flex;gap:6px;list-style:none;align-items:center}
+.nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;padding:6px 16px;border-radius:20px;transition:background .15s,color .15s}
+.nav-links a:hover{background:var(--bg);color:var(--navy)}.nav-links a.active{background:var(--navy);color:#fff!important}
+.nav-cta{font-size:13px;font-weight:600;padding:6px 16px;border-radius:20px;background:var(--accent);color:#fff!important;text-decoration:none;transition:opacity .15s}
+.nav-cta:hover{opacity:.85}
+.page-header{background:var(--surface);border-bottom:1px solid var(--border);padding:3.5rem 2.5rem 3rem}
+.page-header-inner{max-width:900px;margin:0 auto}
+.page-eyebrow{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
+.page-title{font-family:'DM Serif Display',serif;font-size:clamp(32px,5vw,46px);color:var(--navy);line-height:1.1;margin-bottom:1rem}
+.page-subtitle{font-size:15px;color:var(--muted);max-width:620px;line-height:1.75}
+.section{padding:4rem 2.5rem}.section-inner{max-width:900px;margin:0 auto}.section-alt{background:var(--surface)}
+.section-label{font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem}
+.section-heading{font-family:'DM Serif Display',serif;font-size:26px;color:var(--navy);margin-bottom:.4rem;line-height:1.2}
+.section-desc{font-size:13px;color:var(--muted);margin-bottom:2rem;max-width:640px;line-height:1.65}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem}
+.proj-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.75rem;display:flex;flex-direction:column;gap:.6rem;transition:border-color .2s,transform .2s}
+.proj-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.proj-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+.proj-title{font-family:'DM Serif Display',serif;font-size:17px;color:var(--navy);line-height:1.3}
+.proj-year{font-size:11px;font-weight:600;color:var(--muted);white-space:nowrap;padding-top:3px;flex-shrink:0}
+.proj-status{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:20px;width:fit-content}
+.proj-status.completed{background:#E8F5E9;color:#2E7D32}
+.proj-status.in-progress{background:#FFF3E0;color:#E65100}
+.proj-status.under-review{background:#E3F2FD;color:#1565C0}
+.proj-body{font-size:13px;color:var(--muted);line-height:1.7;flex:1}
+.proj-body p{margin-bottom:.5rem}.proj-body p:last-child{margin-bottom:0}
+.proj-link{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:500;color:var(--accent);text-decoration:none;margin-top:.25rem}
+.proj-link:hover{text-decoration:underline}
+.proj-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:.35rem}
+.proj-tag{font-size:11px;padding:3px 10px;border-radius:20px;background:var(--bg);color:var(--muted);border:1px solid var(--border)}
+.proj-outputs{margin-top:.75rem;display:flex;flex-direction:column;gap:.5rem;border-top:1px solid var(--border);padding-top:.75rem}
+.proj-output-row{display:flex;align-items:flex-start;gap:.6rem}
+.proj-output-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:6px}
+.proj-output-text{font-size:12px;color:var(--muted);line-height:1.6}
+.proj-output-text strong{color:var(--navy-mid);font-weight:600}
+footer{background:var(--navy);padding:2.5rem;text-align:center}
+footer p{font-size:12px;color:rgba(255,255,255,.4)}
+footer a{color:rgba(255,255,255,.55);text-decoration:none}
+footer a:hover{color:#fff}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;margin-bottom:1rem;flex-wrap:wrap}
+@media(max-width:680px){nav{padding:0 1.25rem}.nav-links{gap:2px}.nav-links a{padding:5px 10px;font-size:12px}.page-header,.section{padding-left:1.25rem;padding-right:1.25rem}.projects-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-name" href="about.html">Nahiyan Saiyara Khan</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="publications.html">Publications &amp; Presentations</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
+    <li><a href="about.html#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-eyebrow">Research</p>
+    <h1 class="page-title">Projects</h1>
+    <p class="page-subtitle">A snapshot of completed and ongoing research — from my M.Sc. on childhood chemical exposures, through my PhD studies on prenatal drug safety and risk management policies, to collaborative international science.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-inner">
+    <p class="section-label">Current</p>
+    <h2 class="section-heading">Ongoing Work</h2>
+    <p class="section-desc">Active PhD projects and collaborative initiatives &mdash; manuscripts in preparation, under review, or in active data analysis.</p>
+    <div class="projects-grid">
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <p class="proj-title">Fetal Exposure Ranking of Teratogenic Medications in Canada (TRIM-QPC)</p>
+          <span class="proj-year">2024&ndash;present</span>
+        </div>
+        <span class="proj-status in-progress">In progress &mdash; manuscript in preparation</span>
+        <div class="proj-body">
+          <p>A replication of the US Teratogenic Risk Impact and Mitigation (TRIM) tool using administrative data from the Qu&eacute;bec Pregnancy Cohort (2000&ndash;2020). Provides Canadian-specific fetal-exposure estimates for 61 drugs to inform RMP prioritization &mdash; a systematic tool that does not yet exist in Canada. Developed in collaboration with Almut Winterstein (University of Florida), original TRIM tool developer. Targeting <em>CMAJ</em>.</p>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">QPC</span>
+          <span class="proj-tag">Drug Safety</span>
+          <span class="proj-tag">Isotretinoin</span>
+          <span class="proj-tag">CMAJ</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <p class="proj-title">Regulatory Impact on Prenatal Clozapine Exposure: A Triangulated DiD and Synthetic Control Study</p>
+          <span class="proj-year">2024&ndash;present</span>
+        </div>
+        <span class="proj-status in-progress">In progress &mdash; analysis &amp; manuscript</span>
+        <div class="proj-body">
+          <p>A cross-national difference-in-differences and synthetic control study evaluating whether the FDA&rsquo;s 2015 Clozapine REMS reduced prenatal clozapine exposure. Uses US administrative pregnancy data (AM-PREGNANT) as the treated population and the Qu&eacute;bec Pregnancy Cohort as the control (never subject to the REMS), 2004&ndash;2020.</p>
+          <p>Methodological contribution: triangulated quasi-experimental design with US/Canada comparative data, rare in perinatal pharmacoepidemiology. Co-investigator: Prof. Mireille Schnitzer (UdeM, causal inference methods).</p>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">Difference-in-Differences</span>
+          <span class="proj-tag">Synthetic Control</span>
+          <span class="proj-tag">REMS</span>
+          <span class="proj-tag">Causal Inference</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <p class="proj-title">Risk Management Programs for Fetotoxic Drugs Worldwide: A Narrative Review</p>
+          <span class="proj-year">2024&ndash;present</span>
+        </div>
+        <span class="proj-status under-review">Under review &mdash; Drug Safety</span>
+        <div class="proj-body">
+          <p>A comprehensive comparative review of RMPs and Pregnancy Prevention Programs (PPPs) for isotretinoin, thalidomide/analogues (lenalidomide, pomalidomide), and valproate across 11 jurisdictions: USA, Canada, Brazil, Argentina, EU, Japan, South Korea, Singapore, Saudi Arabia, Australia, and New Zealand.</p>
+          <p>Co-authored with Prof. Anick B&eacute;rard. Submitted to <em>Drug Safety</em> (Adis/Springer).</p>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">Narrative Review</span>
+          <span class="proj-tag">iPLEDGE</span>
+          <span class="proj-tag">REMS</span>
+          <span class="proj-tag">11 Jurisdictions</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <p class="proj-title">Safe Beginnings &mdash; Canada-France Research Collaboration</p>
+          <span class="proj-year">2023&ndash;present</span>
+        </div>
+        <span class="proj-status in-progress">Multiple outputs in progress</span>
+        <div class="proj-body">
+          <p>An international research initiative co-led by Prof. Anick B&eacute;rard (Canada) and Dr. Florentia Kaguelidou (France) on the inclusion of pregnant and lactating individuals in clinical trials and pharmacovigilance.</p>
+        </div>
+        <div class="proj-outputs">
+          <div class="proj-output-row">
+            <div class="proj-output-dot"></div>
+            <p class="proj-output-text"><strong>Cohort inventory &amp; narrative review</strong> &mdash; Inventorying pregnancy and mother-child cohorts in Canada and France built through administrative database linkage. Destined for a special issue of <em>Th&eacute;rapies</em>.</p>
+          </div>
+          <div class="proj-output-row">
+            <div class="proj-output-dot"></div>
+            <p class="proj-output-text"><strong>Editorial (author)</strong> &mdash; Editorial on the inclusion of pregnant persons in clinical trials. Destined for the same special issue of <em>Th&eacute;rapies</em>.</p>
+          </div>
+          <div class="proj-output-row">
+            <div class="proj-output-dot"></div>
+            <p class="proj-output-text"><strong>White paper</strong> &mdash; In active writing; synthesizes regulatory frameworks (Helsinki, ICH E21, FDA guidances, CIOMS, 45 CFR Part 46) with a systematic literature review.</p>
+          </div>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">Canada&ndash;France</span>
+          <span class="proj-tag">Cohort Science</span>
+          <span class="proj-tag">Clinical Trials</span>
+          <span class="proj-tag">Pharmacovigilance</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <p class="proj-title">CAMCCO-L Case Study Narrative Reviews</p>
+          <span class="proj-year">2023&ndash;present</span>
+        </div>
+        <span class="proj-status in-progress">In progress &mdash; drafting</span>
+        <div class="proj-body">
+          <p>Narrative reviews converting structured CAMCCO-L case study presentations into publishable manuscripts. Each case study covers the pharmacology and teratogenicity of a drug class, its use during pregnancy, and the policy responses that followed.</p>
+        </div>
+        <div class="proj-outputs">
+          <div class="proj-output-row">
+            <div class="proj-output-dot"></div>
+            <p class="proj-output-text"><strong>Paroxetine &amp; SSRIs / cardiac defects</strong> &mdash; Depression and anxiety in pregnancy, SSRI mechanism of action, postulated teratogenic pathways, role of pharmacoepidemiology and pharmacogenomics in disentangling drug-specific from class effects, and policy implications. Presented at CAMCCO-L, Barcelona (2023). Target: <em>Frontiers for Pharmacoepidemiology</em>.</p>
+          </div>
+          <div class="proj-output-row">
+            <div class="proj-output-dot"></div>
+            <p class="proj-output-text"><strong>Isotretinoin / acne &amp; RMPs</strong> &mdash; Acne burden, isotretinoin teratogenicity, RMP history (SMART, iPLEDGE, EU PPP), international comparisons, and post-Dobbs implications. Presented at CAMCCO-L, SSM Montr&eacute;al (2025). Target: <em>Frontiers for Pharmacoepidemiology</em>.</p>
+          </div>
+          <div class="proj-output-row">
+            <div class="proj-output-dot"></div>
+            <p class="proj-output-text"><strong>Antiepileptic drugs / valproate</strong> &mdash; Valproate teratogenicity, neurodevelopmental outcomes, AED-exposed pregnancy epidemiology, and regulatory responses across jurisdictions.</p>
+          </div>
+          <div class="proj-output-row">
+            <div class="proj-output-dot"></div>
+            <p class="proj-output-text"><strong>Codeine use during breastfeeding</strong> &mdash; Pharmacokinetics of codeine and morphine, CYP2D6 pharmacogenomics, transfer into breast milk, and risk-benefit considerations for lactating persons. Based on CAMCCO-L Case Study 4.</p>
+          </div>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">CAMCCO</span>
+          <span class="proj-tag">Isotretinoin</span>
+          <span class="proj-tag">SSRIs</span>
+          <span class="proj-tag">Codeine</span>
+          <span class="proj-tag">Valproate</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="section section-alt">
+  <div class="section-inner">
+    <p class="section-label">Completed</p>
+    <h2 class="section-heading">Past Work</h2>
+    <p class="section-desc">Projects that have resulted in a published thesis or peer-reviewed article.</p>
+    <div class="projects-grid">
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <p class="proj-title">Childhood &amp; Adolescent Exposure to Chemicals in Personal Care Products</p>
+          <span class="proj-year">2022</span>
+        </div>
+        <span class="proj-status completed">&#10003; Completed &mdash; M.Sc. Thesis</span>
+        <div class="proj-body">
+          <p>A scoping review synthesizing 37 biomonitoring studies on parabens, phenols, phthalates, and PFAS following personal care product use in children and adolescents aged 5&ndash;19. Conducted at the &Eacute;cole de sant&eacute; publique, Universit&eacute; de Montr&eacute;al, supervised by Profs. Maryse Bouchard and Jillian Ashley-Martin.</p>
+          <p>Found consistent associations between product types and chemical classes (makeup &rarr; parabens; lotion &rarr; phenols; perfume &rarr; phthalates) and highlighted gaps in methodological standardization across studies.</p>
+        </div>
+        <a class="proj-link" href="https://doi.org/10.71781/1440" target="_blank" rel="noopener">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          View thesis on Papyrus
+        </a>
+        <div class="proj-tags">
+          <span class="proj-tag">Scoping Review</span>
+          <span class="proj-tag">Environmental Epidemiology</span>
+          <span class="proj-tag">PFAS</span>
+          <span class="proj-tag">Phthalates</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <p class="proj-title">Impact of Canadian Risk Management Plans on Prenatal Exposure to Fetotoxic Medications</p>
+          <span class="proj-year">2026</span>
+        </div>
+        <span class="proj-status completed">&#10003; Published &mdash; Clin Pharmacol Ther</span>
+        <div class="proj-body">
+          <p>A population-based interrupted time series (ITS) analysis using the Qu&eacute;bec Pregnancy Cohort (QPC, 1998&ndash;2022) evaluating whether Canadian RMPs reduced first-trimester prenatal exposure to teratogenic and fetotoxic medications. Quasi-Poisson segmented regression with Fourier seasonality terms; subgroup analyses for retinoids and valproic acid.</p>
+          <p>First-author study, supervised by Prof. Anick B&eacute;rard, in collaboration with biostatistician Odile Sheehy. Presented as a poster at ISPE 2026, Milan.</p>
+        </div>
+        <a class="proj-link" href="https://doi.org/10.1002/cpt.70353" target="_blank" rel="noopener">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Khan et al. 2026 &middot; doi:10.1002/cpt.70353
+        </a>
+        <div class="proj-tags">
+          <span class="proj-tag">Interrupted Time Series</span>
+          <span class="proj-tag">Pharmacoepidemiology</span>
+          <span class="proj-tag">RMPs</span>
+          <span class="proj-tag">QPC</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="cv.html">CV</a>
+    <a href="publications.html">Publications &amp; Presentations</a>
+    <a href="projects.html">Projects</a>
+    <a href="teaching.html">Teaching</a>
+  </div>
+  <p>&copy; 2026 Nahiyan Saiyara Khan &middot; Universit&eacute; de Montr&eacute;al</p>
+</footer>
+</body>
+</html>
