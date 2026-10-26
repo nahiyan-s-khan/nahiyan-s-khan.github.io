@@ -2,14 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-  <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JK61F2W1S5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-JK61F2W1S5');
-</script>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="shortcut icon" href="favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -183,7 +175,7 @@ footer a:hover{color:var(--accent)}
     <div>
       <p class="hero-eyebrow">PhD Candidate · Pharmacoepidemiology · Université de Montréal</p>
       <h1 class="hero-name">Hi, I'm Nahiyan !</h1>
-      <p class="hero-tagline">PhD researcher using quasi-experimental methods and real-world data to understand how risk management policies influence teratogenic medication use during pregnancy — generating evidence that empowers pregnant people, clinicians, and policymakers alike.</p>
+      <p class="hero-tagline">PhD researcher using causal inference and real-world data to understand how risk management policies influence teratogenic medication use during pregnancy — generating evidence that empowers pregnant people, clinicians, and policymakers alike.</p>
       <div class="hero-meta">
         <span class="hero-meta-item">
           <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
@@ -214,7 +206,7 @@ footer a:hover{color:var(--accent)}
   <div class="stats-inner">
     <div class="stat-item">
       <p class="stat-num">4<sup>+</sup></p>
-      <p class="stat-desc">Years working with real-world administrative data (QPC, AM-PREGNANT)</p>
+      <p class="stat-desc">Years working with real-world administrative data (QPC, RAMQ, MED-ECHO)</p>
     </div>
     <div class="stat-item">
       <p class="stat-num">7<sup>+</sup></p>
@@ -235,7 +227,7 @@ footer a:hover{color:var(--accent)}
     <div class="about-grid">
       <div class="about-body">
         <p>I'm a PhD Candidate in Pharmaceutical Sciences at Université de Montréal, based at the Azrieli Research Centre, CHU Sainte-Justine, supervised by Prof. Anick Bérard (Canada Research Chair, Tier 1). My doctoral research evaluates the real-world impact of risk management plans on prenatal exposure to teratogenic and fetotoxic medications, using 25 years of data from the Quebec Pregnancy Cohort.</p>
-        <p>I am particularly interested in roles in <strong> medical science, pharmacovigilance, drug safety, RWE, and HEOR</strong> — fields where rigorous evidence shapes regulatory, clinical, and strategic decisions. I also hold hands-on observership experience in pharmacovigilance (CRPV Cochin, AP-HP, Paris) and OB-GYN (Hôpital Pitié-Salpêtrière, Paris).</p>
+        <p>I am particularly interested in roles in <strong>pharmacovigilance, drug safety, RWE, and HEOR</strong> — fields where rigorous evidence shapes regulatory, clinical, and strategic decisions. I also hold hands-on observership experience in pharmacovigilance (CRPV Cochin, AP-HP, Paris) and OB-GYN (Hôpital Pitié-Salpêtrière, Paris).</p>
         <div class="interest-tags">
           <span class="tag">Pharmacovigilance</span>
           <span class="tag">Drug Safety</span>
@@ -251,7 +243,7 @@ footer a:hover{color:var(--accent)}
         <div class="sidebar-card">
           <p class="sidebar-label">Education</p>
           <div class="sidebar-item"><span class="sidebar-dot"></span><span>PhD, Pharmaceutical Sciences (Pharmacoepidemiology) — Université de Montréal · Supervisor: Prof. Anick Bérard, CRC Tier 1</span></div>
-          <div class="sidebar-item"><span class="sidebar-dot"></span><span>M.Sc., Environmental &amp; Occupational Health — ESPUM, Université de Montréal · Supervisor: Dr. Maryse Bouchard, CRC</span></div>
+          <div class="sidebar-item"><span class="sidebar-dot"></span><span>M.Sc., Environmental &amp; Occupational Health — ESPUM, UdeM · Supervisor: Dr. Maryse Bouchard (CRC)</span></div>
           <div class="sidebar-item"><span class="sidebar-dot"></span><span>B.Sc., Biochemistry &amp; Molecular Medicine — Université de Montréal</span></div>
         </div>
         <div class="sidebar-card">
@@ -279,10 +271,10 @@ footer a:hover{color:var(--accent)}
 
       <div class="project-card">
         <div class="proj-header">
-          <p class="proj-title">Doctoral Research</p>
+          <p class="proj-title">Quebec Pregnancy Cohort — Doctoral Research</p>
           <span class="proj-period">2023 – Present</span>
         </div>
-        <p class="proj-body">Three-manuscript PhD thesis evaluating the impact of risk management plans on prenatal fetotoxic medication exposure. First paper published in <em>Clinical Pharmacology &amp; Therapeutics</em> (2026).</p>
+        <p class="proj-body">Three-manuscript PhD thesis evaluating the impact of risk management plans on prenatal fetotoxic medication exposure. First paper published in <em>Clinical Pharmacology &amp; Therapeutics</em> (2025). Two projects in progress: TRIM Tool development and a U.S.–Canada REMS comparison for clozapine.</p>
         <div class="proj-tags"><span class="proj-tag">ITS</span><span class="proj-tag">Quasi-Poisson</span><span class="proj-tag">R</span><span class="proj-tag">RAMQ</span></div>
       </div>
 
@@ -297,7 +289,7 @@ footer a:hover{color:var(--accent)}
 
       <div class="project-card">
         <div class="proj-header">
-          <p class="proj-title">CAMCCO-Learn</p>
+          <p class="proj-title">CAMCCO-L</p>
           <span class="proj-period">2022 – Present</span>
         </div>
         <p class="proj-url"><a href="https://camccol.ca" target="_blank">camccol.ca</a></p>
@@ -345,25 +337,29 @@ footer a:hover{color:var(--accent)}
         </div>
       </div>
       <div class="contact-form">
+        <form id="contact-form" action="https://formspree.io/f/xzeeevdv" method="POST">
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label">First name</label>
-            <input type="text" class="form-input" placeholder="Jane">
+            <label class="form-label" for="cf-first">First name</label>
+            <input id="cf-first" type="text" name="first_name" class="form-input" placeholder="Jane" required>
           </div>
           <div class="form-group">
-            <label class="form-label">Last name</label>
-            <input type="text" class="form-input" placeholder="Smith">
+            <label class="form-label" for="cf-last">Last name</label>
+            <input id="cf-last" type="text" name="last_name" class="form-input" placeholder="Smith">
           </div>
         </div>
         <div class="form-group">
-          <label class="form-label">Email</label>
-          <input type="email" class="form-input" placeholder="jane@example.com">
+          <label class="form-label" for="cf-email">Email</label>
+          <input id="cf-email" type="email" name="email" class="form-input" placeholder="jane@example.com" required>
         </div>
         <div class="form-group">
-          <label class="form-label">Message</label>
-          <textarea class="form-textarea" placeholder="Hi Nahiyan, I'd love to connect about…"></textarea>
+          <label class="form-label" for="cf-msg">Message</label>
+          <textarea id="cf-msg" name="message" class="form-textarea" placeholder="Hi Nahiyan, I'd love to connect about…" required></textarea>
         </div>
-        <button class="form-submit" onclick="handleContact(event)">Send message</button>
+        <button type="submit" class="form-submit" id="cf-btn">Send message</button>
+        <p id="cf-success" style="display:none;margin-top:12px;color:#2a6b3a;font-size:14px;font-weight:500;">✓ Message sent — I'll be in touch soon!</p>
+        <p id="cf-error" style="display:none;margin-top:12px;color:#b03060;font-size:14px;">Something went wrong. Please email me directly at <a href="mailto:nahiyan.khan@umontreal.ca">nahiyan.khan@umontreal.ca</a>.</p>
+        </form>
       </div>
     </div>
   </div>
@@ -391,13 +387,35 @@ document.fonts.load('700 1em Caveat').then(() => {
 setTimeout(() => document.documentElement.classList.add('fonts-loaded'), 1000);
 </script>
 <script>
-function handleContact(e){
+document.getElementById('contact-form').addEventListener('submit', async function(e){
   e.preventDefault();
-  const btn=e.target;
-  btn.textContent='Message sent ✓';
-  btn.style.background='#2E3D5F';
-  btn.disabled=true;
-}
+  const btn = document.getElementById('cf-btn');
+  const ok  = document.getElementById('cf-success');
+  const err = document.getElementById('cf-error');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  ok.style.display = 'none';
+  err.style.display = 'none';
+  try {
+    const res = await fetch('https://formspree.io/f/xzeeevdv', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(this)
+    });
+    if (res.ok) {
+      ok.style.display = 'block';
+      this.reset();
+      btn.textContent = 'Sent ✓';
+      btn.style.background = '#2E3D5F';
+    } else {
+      throw new Error('server error');
+    }
+  } catch(_) {
+    err.style.display = 'block';
+    btn.textContent = 'Send message';
+    btn.disabled = false;
+  }
+});
 </script>
 </body>
 </html>
