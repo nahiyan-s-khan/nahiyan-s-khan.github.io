@@ -97,8 +97,14 @@ main{max-width:840px;margin:0 auto;padding:3.5rem 2.5rem 5rem}
 .conf-badge.selected{background:#F0F4E8;color:#4A6C1C;border:1px solid #BFCF9E}
 .conf-badge.workshop{background:#FEF9EC;color:#8A6200;border:1px solid #E8CF80}
 
-footer{text-align:center;padding:2rem;font-size:12px;color:var(--muted);border-top:1px solid var(--border)}
-footer a{color:var(--accent);text-decoration:none}
+footer{background:var(--navy);padding:2.5rem;text-align:center}
+.footer-inner{max-width:900px;margin:0 auto}
+footer p{font-size:12px;color:rgba(255,255,255,.4)}
+footer a{color:rgba(255,255,255,.6);text-decoration:none}
+footer a:hover{color:var(--accent)}
+.footer-links{display:flex;justify-content:center;gap:2rem;margin-bottom:1rem;flex-wrap:wrap}
+.footer-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.6);text-decoration:none;transition:color .15s}
+.footer-links a:hover{color:var(--accent)}
 
 @media(max-width:600px){
   main,nav{padding-left:1.25rem;padding-right:1.25rem}
@@ -455,6 +461,17 @@ footer a{color:var(--accent);text-decoration:none}
 
 </main>
 
-<footer>© 2026 Nahiyan Saiyara Khan &nbsp;·&nbsp; <a href="cv.html">← CV</a> &nbsp;·&nbsp; <a href="about.html">About</a></footer>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="cv.html">CV</a>
+      <a href="publications.html">Publications &amp; Presentations</a>
+      <a href="projects.html">Projects</a>
+      <a href="teaching.html">Teaching</a>
+    </div>
+    <p>&copy; 2026 Nahiyan Saiyara Khan &middot; Universit&eacute; de Montr&eacute;al</p>
+  </div>
+</footer>
 </body>
 </html>

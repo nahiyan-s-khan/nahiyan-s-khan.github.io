@@ -78,8 +78,14 @@ main{max-width:840px;margin:0 auto;padding:3.5rem 2.5rem 5rem}
 .contact-row a:hover{text-decoration:underline}
 .contact-label{font-size:12px;font-weight:600;color:var(--muted);min-width:76px}
 
-footer{text-align:center;padding:2rem;font-size:12px;color:var(--muted);border-top:1px solid var(--border)}
-footer a{color:var(--accent);text-decoration:none}
+footer{background:var(--navy);padding:2.5rem;text-align:center}
+.footer-inner{max-width:900px;margin:0 auto}
+footer p{font-size:12px;color:rgba(255,255,255,.4)}
+footer a{color:rgba(255,255,255,.6);text-decoration:none}
+footer a:hover{color:var(--accent)}
+.footer-links{display:flex;justify-content:center;gap:2rem;margin-bottom:1rem;flex-wrap:wrap}
+.footer-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.6);text-decoration:none;transition:color .15s}
+.footer-links a:hover{color:var(--accent)}
 
 @media(max-width:640px){
   .cv-grid{grid-template-columns:1fr}
@@ -389,6 +395,17 @@ footer a{color:var(--accent);text-decoration:none}
 </div>
 </main>
 
-<footer>© 2026 Nahiyan Saiyara Khan &nbsp;·&nbsp; <a href="publications.html">Publications →</a></footer>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="cv.html">CV</a>
+      <a href="publications.html">Publications &amp; Presentations</a>
+      <a href="projects.html">Projects</a>
+      <a href="teaching.html">Teaching</a>
+    </div>
+    <p>&copy; 2026 Nahiyan Saiyara Khan &middot; Universit&eacute; de Montr&eacute;al</p>
+  </div>
+</footer>
 </body>
 </html>
