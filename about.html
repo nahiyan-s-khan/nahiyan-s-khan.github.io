@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>About — Nahiyan Saiyara Khan</title>
 <meta name="google-site-verification" content="ASnjXkEBq_5ozHc8okx3BI5PTH55krstnbb0Wxs_R_U">
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -50,9 +55,9 @@ nav {
 .nav-cta { font-size: 13px; font-weight: 600; padding: 6px 16px; border-radius: 20px; background: var(--accent); color: #fff !important; text-decoration: none; }
 
 /* PUB BANNER */
-.pub-bar { background: var(--navy); padding: .75rem max(2rem, env(safe-area-inset-left,0px)); display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.pub-bar { background: var(--navy); padding: .6rem max(2rem, env(safe-area-inset-left,0px)); display: flex; align-items: center; justify-content: center; gap: .75rem; flex-wrap: nowrap; overflow: hidden; }
 .pub-chip { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); background: var(--accent-light); padding: 3px 10px; border-radius: 20px; }
-.pub-text { font-size: 13px; color: rgba(255,255,255,.65); font-style: italic; }
+.pub-text { font-size: 13px; color: rgba(255,255,255,.65); font-style: italic; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
 .pub-link { font-size: 13px; font-weight: 600; color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.3); white-space: nowrap; }
 
 /* HERO — slim, name left, social right */
@@ -206,7 +211,8 @@ footer p { font-size: 12px; color: rgba(255,255,255,.4); }
   .hero-left { align-items: center; }
 }
 </style>
-
+</head>
+<body>
 <nav>
   <a href="about.html" class="nav-name">Nahiyan Saiyara Khan</a>
   <ul class="nav-links">
@@ -403,3 +409,5 @@ document.getElementById('cf').addEventListener('submit', async function(e) {
   } catch(_) { document.getElementById('cf-err').hidden = false; btn.textContent = 'Send message'; btn.disabled = false; }
 });
 </script>
+</body>
+</html>
