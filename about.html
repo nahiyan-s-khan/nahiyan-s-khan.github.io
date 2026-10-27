@@ -11,6 +11,8 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK61F2W1S5"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-JK61F2W1S5');</script>
 <style>
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+
 /* Option D — Bento Grid: mosaic of cards below a clean hero */
 :root {
   --bg: #F8F7F4; --surface: #fff; --navy: #1A2340; --navy-mid: #2E3D5F;
@@ -210,24 +212,38 @@ footer p { font-size: 12px; color: rgba(255,255,255,.4); }
   .hero-left { align-items: center; }
 }
 </style>
+<style id="site-header">
+nav.sh-nav{box-sizing:border-box;background:var(--surface);border-bottom:1px solid var(--border);padding:0 max(2rem,env(safe-area-inset-left,0px));display:flex;align-items:center;justify-content:space-between;height:58px;position:sticky;top:0;z-index:200;margin:0;font-family:'Inter',sans-serif;line-height:1.7}
+nav.sh-nav .sh-name{font-family:'DM Serif Display',serif;font-size:18px;font-weight:400;color:var(--navy);text-decoration:none;white-space:nowrap}
+nav.sh-nav .sh-links{display:flex;gap:6px;list-style:none;align-items:center;margin:0;padding:0}
+nav.sh-nav .sh-links li{margin:0;padding:0}
+nav.sh-nav .sh-links a{display:inline-block;font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;padding:6px 14px;border-radius:20px;line-height:1.7;transition:background .15s,color .15s}
+nav.sh-nav .sh-links a:hover{background:var(--bg);color:var(--navy)}
+nav.sh-nav .sh-links a.sh-active{background:var(--navy);color:var(--bg)}
+nav.sh-nav .sh-links a.sh-cta{font-weight:600;padding:6px 16px;background:var(--accent);color:#fff}
+div.sh-bar{box-sizing:border-box;background:var(--navy);padding:.75rem max(2rem,env(safe-area-inset-left,0px));display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;margin:0;font-family:'Inter',sans-serif;line-height:1.7;text-align:left}
+div.sh-bar .sh-chip{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);background:var(--accent-light);padding:3px 10px;border-radius:20px;line-height:1.7}
+div.sh-bar .sh-text{font-size:13px;font-weight:400;color:rgba(255,255,255,.65);font-style:italic;line-height:1.7}
+div.sh-bar .sh-link{font-size:13px;font-weight:600;color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3);white-space:nowrap;padding:0;border-radius:0;background:none;line-height:1.7}
+</style>
 </head>
 <body>
-<nav>
-  <a href="about.html" class="nav-name">Nahiyan Saiyara Khan</a>
-  <ul class="nav-links">
-    <li><a href="about.html" class="active">About</a></li>
+<nav class="sh-nav">
+  <a href="about.html" class="sh-name">Nahiyan Saiyara Khan</a>
+  <ul class="sh-links">
+    <li><a href="about.html" class="sh-active">About</a></li>
     <li><a href="cv.html">CV</a></li>
     <li><a href="publications.html">Publications</a></li>
     <li><a href="projects.html">Projects</a></li>
     <li><a href="teaching.html">Teaching</a></li>
-    <li><a href="about.html#contact" class="nav-cta">Contact</a></li>
+    <li><a href="about.html#contact" class="sh-cta">Contact</a></li>
   </ul>
 </nav>
 
-<div class="pub-bar">
-  <span class="pub-chip">✦ New publication</span>
-  <span class="pub-text">Reducing Exposure Before Birth: An ITS Study of Prenatal Exposure to Fetotoxic Medications Under RMPs in Canada</span>
-  <a href="https://doi.org/10.1002/cpt.70353" target="_blank" class="pub-link">Read in CPT →</a>
+<div class="sh-bar">
+  <span class="sh-chip">✦ New publication</span>
+  <span class="sh-text">Reducing Exposure Before Birth: An ITS Study of Prenatal Exposure to Fetotoxic Medications Under RMPs in Canada</span>
+  <a href="https://doi.org/10.1002/cpt.70353" target="_blank" class="sh-link">Read in CPT →</a>
 </div>
 
 <!-- SLIM HERO -->
